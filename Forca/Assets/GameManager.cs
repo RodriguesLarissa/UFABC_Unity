@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject centro; // objeto de texto que indica o centro da tela
 
     private string palavraOculta = ""; // palavra a ser descoberta
+
+    private string[] palavrasOculta = new string[] {"teste","bola","palavra"}; //array de palavras ocultas
     private int tamanhoPalavraOculta; // tamanho da palavra oculta
     char[] letrasOcultas; // letras da palavra oculta
     bool[] letrasDescobertas; // indicador de quais letras foram descobertas
@@ -21,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        
+        checkTeclado();
     }
 
     void InitLetras(){
@@ -36,7 +39,10 @@ public class GameManager : MonoBehaviour
     }
 
     void InitGame(){
-        palavraOculta = "Elefante"; // definição da palavra a ser descoberta
+        //palavraOculta = "Elefante"; // definição da palavra a ser descoberta
+
+        int numeroAleatorio = Random.Range(0, palavrasOculta.Length); // sortea uma palavra aleatoria
+        palavraOculta = palavrasOculta[numeroAleatorio];
         tamanhoPalavraOculta = palavraOculta.Length; // determina-se o numero de letras da palavra oculta
         palavraOculta = palavraOculta.ToUpper(); // transforma-se a palavra em maiuscula
         letrasOcultas = new char[tamanhoPalavraOculta]; // instancia-se o array char das letras da palavra 
@@ -44,4 +50,22 @@ public class GameManager : MonoBehaviour
         letrasOcultas = palavraOculta.ToCharArray(); // copia-se a palavra no array de letras
     }
 
+    void checkTeclado(){
+        if(Input.anyKeyDown){
+            char letraTeclado = Input.inputString.ToCharArray()[0];
+            int letraTecladoInt = System.Convert.ToInt32(letraTeclado);
+
+            if(letraTecladoInt >= 97 && letraTecladoInt <= 122){
+                for (int i = 0; i < tamanhoPalavraOculta; i++){
+                    if(!letrasDescobertas[i]){
+                        letraTeclado = System.Char.ToUpper(letraTeclado);
+                        if(letrasOcultas[i] == letraTeclado){
+                            letrasDescobertas[i] = true;
+                            GameObject.Find("letra" + (i+1)).GetComponent<Text>().text = letraTeclado.ToString();
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
