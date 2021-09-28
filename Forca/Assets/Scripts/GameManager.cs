@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class GameManager : MonoBehaviour
 
     private string palavraOculta = ""; // palavra a ser descoberta
 
-    private string[] palavrasOculta = new string[] {"teste","bola","palavra"}; //array de palavras ocultas
+    //private string[] palavrasOculta = new string[] {"teste","bola","palavra"}; //array de palavras ocultas
+
     private int tamanhoPalavraOculta; // tamanho da palavra oculta
     char[] letrasOcultas; // letras da palavra oculta
     bool[] letrasDescobertas; // indicador de quais letras foram descobertas
@@ -49,9 +51,10 @@ public class GameManager : MonoBehaviour
 
     void InitGame(){
         //palavraOculta = "Elefante"; // definição da palavra a ser descoberta
-
-        int numeroAleatorio = Random.Range(0, palavrasOculta.Length); // sortea uma palavra aleatoria
-        palavraOculta = palavrasOculta[numeroAleatorio];
+        //int numeroAleatorio = Random.Range(0, palavrasOculta.Length); // sortea uma palavra aleatoria
+        //palavraOculta = palavrasOculta[numeroAleatorio];
+        
+        palavraOculta = PegaUmaPalavraDoArquivo();
         tamanhoPalavraOculta = palavraOculta.Length; // determina-se o numero de letras da palavra oculta
         palavraOculta = palavraOculta.ToUpper(); // transforma-se a palavra em maiuscula
         letrasOcultas = new char[tamanhoPalavraOculta]; // instancia-se o array char das letras da palavra 
@@ -69,6 +72,10 @@ public class GameManager : MonoBehaviour
                 numTentativas++;
                 UpdateNumTentativas();
 
+                if(numTentativas > maxNumTentativas){
+                    SceneManager.LoadScene("Lab1_forca");
+                }
+
                 for (int i = 0; i < tamanhoPalavraOculta; i++){
                     if(!letrasDescobertas[i]){
                         letraTeclado = System.Char.ToUpper(letraTeclado);
@@ -79,10 +86,10 @@ public class GameManager : MonoBehaviour
                             score++;
                             PlayerPrefs.SetInt("score", score);
                             UpdateScore();
+                            verificaSePalavraDescoberta();
                         }
                     }
                 }
-
             }
         }
     }
@@ -93,5 +100,25 @@ public class GameManager : MonoBehaviour
 
     void UpdateScore(){
         GameObject.Find("scoreUI").GetComponent<Text>().text = "Score: " + score;
+    }
+
+    void verificaSePalavraDescoberta(){
+        bool condicao = true;
+        for (int i = 0; i < tamanhoPalavraOculta; i++)
+        {
+            condicao = condicao && letrasDescobertas[i];
+        }
+        if(condicao){
+            PlayerPrefs.SetString("ultimaPalavraOculta", palavraOculta);
+            SceneManager.LoadScene("Lab1_salvo");
+        }
+    }
+
+    string PegaUmaPalavraDoArquivo(){
+        TextAsset t1 = (TextAsset)Resources.Load("palavras1", typeof(TextAsset));
+        string s = t1.text;
+        string[] palavras = s.Split(' ');
+        int palavraAleatoria = Random.Range(0, palavras.Length + 1);
+        return (palavras[palavraAleatoria]);
     }
 }
