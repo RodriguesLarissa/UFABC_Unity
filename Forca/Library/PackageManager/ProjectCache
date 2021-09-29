@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637677113404061793
-    m_Hash: 2515013177
+      ticks: 637685056587721908
+    m_Hash: 3606532961
   m_LockFileStatus:
     m_FilePath: C:/Users/Larissa/Desktop/Unity Projects/UFABC_Unity/Forca/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637677113746291263
-    m_Hash: 4193688565
+      ticks: 637685056587731923
+    m_Hash: 2169045942
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
