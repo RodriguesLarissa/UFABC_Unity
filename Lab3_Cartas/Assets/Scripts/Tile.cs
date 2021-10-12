@@ -24,13 +24,14 @@ public class Tile : MonoBehaviour
         O método OnMouseDown() faz que a carta seja revelada ou escondida quando o jogador clicar na carta.
     */
     public void OnMouseDown(){
-        print("Você pressionou o Tile"); 
-        if(tileRevelada){
-            EscondeCarta();
-        }
-        else{
-            RevelaCarta();
-        }
+        // print("Você pressionou o Tile"); 
+        // if(tileRevelada){
+        //     EscondeCarta();
+        // }
+        // else{
+        //     RevelaCarta();
+        // }
+        GameObject.Find("gameManager").GetComponent<ManageCartas>().CartaSeleciona(gameObject);
     }
 
     /*
