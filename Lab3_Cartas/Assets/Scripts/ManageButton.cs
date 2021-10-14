@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ManageButton : MonoBehaviour
-{
-    public ManageCartas manageCartas;
-    
+{    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +19,22 @@ public class ManageButton : MonoBehaviour
     }
 
     public void gameEasy(){
-        GameObject.Find("gameManager").GetComponent<ManageCartas>().setDificuldade(1);
+        PlayerPrefs.SetInt("Dificuldade", 1);
         SceneManager.LoadScene("Lab3"); // Ao clicar no botão, irá para a cena do jogo
     }
 
     public void gameMedium(){
-        GameObject.Find("gameManager").GetComponent<ManageCartas>().setDificuldade(3);
+        PlayerPrefs.SetInt("Dificuldade", 3);
         SceneManager.LoadScene("Lab3"); // Ao clicar no botão, irá para a cena do jogo  
     }
 
     public void gameHard(){
-        manageCartas.setDificuldade(4);
-        //GameObject.Find("gameManager").GetComponent<ManageCartas>().setDificuldade(4);
+        PlayerPrefs.SetInt("Dificuldade", 4);
         SceneManager.LoadScene("Lab3"); // Ao clicar no botão, irá para a cena do jogo
+    }
+
+    public void Creditos(){
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Ending"); // Ao clicar no botão, irá para a cena do jogo
     }
 }

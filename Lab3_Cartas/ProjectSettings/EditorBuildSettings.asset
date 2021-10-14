@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Recorde.unity
     guid: b1cbfb47f6843024fa8b879c2aa5e5af
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 23f2c542680d20145828ed393f25030b
   m_configObjects: {}
