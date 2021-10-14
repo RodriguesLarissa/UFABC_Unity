@@ -25,10 +25,17 @@ MonoBehaviour:
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 19471
 =======
   controlID: 2368
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  controlID: 2368
+=======
+  controlID: 19471
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,10 +150,17 @@ MonoBehaviour:
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 19472
 =======
   controlID: 2369
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  controlID: 2369
+=======
+  controlID: 19472
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,10 +186,17 @@ MonoBehaviour:
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 19473
 =======
   controlID: 2370
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  controlID: 2370
+=======
+  controlID: 19473
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,12 +215,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 268
     height: 364
 =======
     width: 354
     height: 543
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    width: 354
+    height: 543
+=======
+    width: 268
+    height: 364
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -238,10 +268,17 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: 746affff9c6affff666cffffb46cffffb683ffffa284ffff9c8afffff491ffffeaa0ffff38a6ffff64bdfffff6beffffdcc0ffff84c4ffffc4ceffff9ed0ffff2ad4ffff44d4ffff56d4ffff72daffff7ee2ffff8ce2ffff9ce2ffff18ebffff16ecffff2af9ffffe8f9ffff5044000030630000b6640000c6660000266d0000fa6f0000247d000000820000f6820000
 =======
       m_ExpandedIDs: b0f5ffffecf5ffff60f6ffff6ef6ffff7ef6ffff8ef6ffffa0f6ffffb0f6ffffbef6ffff2af9ffff40f9ffff56f9ffff42faffff5afaffff3cfbffff06440000
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+      m_ExpandedIDs: b0f5ffffecf5ffff60f6ffff6ef6ffff7ef6ffff8ef6ffffa0f6ffffb0f6ffffbef6ffff2af9ffff40f9ffff56f9ffff42faffff5afaffff3cfbffff06440000
+=======
+      m_ExpandedIDs: 746affff9c6affff666cffffb46cffffb683ffffa284ffff9c8afffff491ffffeaa0ffff38a6ffff64bdfffff6beffffdcc0ffff84c4ffffc4ceffff9ed0ffff2ad4ffff44d4ffff56d4ffff72daffff7ee2ffff8ce2ffff9ce2ffff18ebffff16ecffff2af9ffffe8f9ffff5044000030630000b6640000c6660000266d0000fa6f0000247d000000820000f6820000
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -425,6 +462,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 364
     width: 1090
     height: 271
@@ -433,6 +471,16 @@ MonoBehaviour:
     width: 1438
     height: 404
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    y: 543
+    width: 1438
+    height: 404
+=======
+    y: 364
+    width: 1090
+    height: 271
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
@@ -480,26 +528,41 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Resources
 =======
     - Assets/Sounds
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    - Assets/Sounds
+=======
+    - Assets/Resources
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Resources
 =======
   - Assets/Sounds
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  - Assets/Sounds
+=======
+  - Assets/Resources
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Larissa\Desktop\Unity Projects\UFABC_Unity\Lab3_Cartas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: 2e440000
     m_LastClickedID: 17454
@@ -509,6 +572,16 @@ MonoBehaviour:
     m_LastClickedID: 16974
     m_ExpandedIDs: 000000004042000000ca9a3b
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    m_SelectedIDs: 4e420000
+    m_LastClickedID: 16974
+    m_ExpandedIDs: 000000004042000000ca9a3b
+=======
+    m_SelectedIDs: 2e440000
+    m_LastClickedID: 17454
+    m_ExpandedIDs: 000000002244000000ca9a3b
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -537,10 +610,17 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000002244000000ca9a3b
 =======
     m_ExpandedIDs: 000000004042000000ca9a3b
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    m_ExpandedIDs: 000000004042000000ca9a3b
+=======
+    m_ExpandedIDs: 000000002244000000ca9a3b
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,9 +645,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: a4f5ffff
+    m_LastClickedInstanceID: -2652
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -639,12 +719,21 @@ MonoBehaviour:
     x: 1438
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 276
     height: 635
 =======
     width: 482
     height: 947
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    width: 482
+    height: 947
+=======
+    width: 276
+    height: 635
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -684,10 +773,17 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastInspectedObjectInstanceID: 5996
 =======
   m_LastInspectedObjectInstanceID: -2652
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  m_LastInspectedObjectInstanceID: -2652
+=======
+  m_LastInspectedObjectInstanceID: 5996
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:

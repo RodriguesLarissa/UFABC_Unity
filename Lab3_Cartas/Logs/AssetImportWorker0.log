@@ -16,11 +16,21 @@ C:/Users/Larissa/Desktop/Unity Projects/UFABC_Unity/Lab3_Cartas
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+1064
+Successfully changed project path to: C:/Users/Larissa/Desktop/Unity Projects/UFABC_Unity/Lab3_Cartas
+C:/Users/Larissa/Desktop/Unity Projects/UFABC_Unity/Lab3_Cartas
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 50.75 ms, found 3 plugins.
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 65411
 Successfully changed project path to: C:/Users/guime/Área de Trabalho/UFABC_Unity/Lab3_Cartas
 C:/Users/guime/Área de Trabalho/UFABC_Unity/Lab3_Cartas
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 60.85 ms, found 3 plugins.
+<<<<<<< HEAD
 =======
 1064
 Successfully changed project path to: C:/Users/Larissa/Desktop/Unity Projects/UFABC_Unity/Lab3_Cartas
@@ -28,6 +38,9 @@ C:/Users/Larissa/Desktop/Unity Projects/UFABC_Unity/Lab3_Cartas
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 50.75 ms, found 3 plugins.
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path E:/Unity/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -41,6 +54,26 @@ Direct3D:
     Driver:   27.20.21003.1028
 Initialize mono
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Mono path[0] = 'E:/Unity/2020.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001352 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1024ms)
+		BeginReloadAssembly (61ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
@@ -57,6 +90,7 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1490ms)
 		BeginReloadAssembly (82ms)
+<<<<<<< HEAD
 =======
 Mono path[0] = 'E:/Unity/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
@@ -75,12 +109,26 @@ Domain Reload Profiling:
 	ReloadAssembly (1024ms)
 		BeginReloadAssembly (61ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		EndReloadAssembly (464ms)
+			LoadAssemblies (60ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (166ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (195ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 		EndReloadAssembly (641ms)
 			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -88,6 +136,7 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (42ms)
 			SetupLoadedEditorAssemblies (286ms)
+<<<<<<< HEAD
 =======
 		EndReloadAssembly (464ms)
 			LoadAssemblies (60ms)
@@ -97,20 +146,35 @@ Domain Reload Profiling:
 			RebuildScriptCaches (33ms)
 			SetupLoadedEditorAssemblies (195ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				RefreshPlugins (50ms)
+				BeforeProcessingInitializeOnLoad (10ms)
+				ProcessInitializeOnLoadAttributes (95ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				RefreshPlugins (58ms)
 				BeforeProcessingInitializeOnLoad (16ms)
 				ProcessInitializeOnLoadAttributes (161ms)
 				ProcessInitializeOnLoadMethodAttributes (46ms)
+<<<<<<< HEAD
 =======
 				RefreshPlugins (50ms)
 				BeforeProcessingInitializeOnLoad (10ms)
 				ProcessInitializeOnLoadAttributes (95ms)
 				ProcessInitializeOnLoadMethodAttributes (35ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -118,6 +182,20 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Registered in 0.006018 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 47.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.241 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1242ms)
+		BeginReloadAssembly (169ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Registered in 0.005416 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -128,6 +206,7 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1693ms)
 		BeginReloadAssembly (186ms)
+<<<<<<< HEAD
 =======
 Registered in 0.006018 seconds.
 Begin MonoManager ReloadAssembly
@@ -140,11 +219,26 @@ Domain Reload Profiling:
 	ReloadAssembly (1242ms)
 		BeginReloadAssembly (169ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1002ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (321ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (383ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 			CreateAndSetChildDomain (22ms)
 		EndReloadAssembly (1425ms)
 			LoadAssemblies (122ms)
@@ -153,6 +247,7 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (72ms)
 			SetupLoadedEditorAssemblies (599ms)
+<<<<<<< HEAD
 =======
 			CreateAndSetChildDomain (21ms)
 		EndReloadAssembly (1002ms)
@@ -163,10 +258,25 @@ Domain Reload Profiling:
 			RebuildScriptCaches (51ms)
 			SetupLoadedEditorAssemblies (383ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				RefreshPlugins (48ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (235ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				RefreshPlugins (59ms)
 				BeforeProcessingInitializeOnLoad (151ms)
 				ProcessInitializeOnLoadAttributes (353ms)
@@ -175,6 +285,7 @@ Domain Reload Profiling:
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (13ms)
+<<<<<<< HEAD
 =======
 				RefreshPlugins (48ms)
 				BeforeProcessingInitializeOnLoad (77ms)
@@ -185,6 +296,9 @@ Domain Reload Profiling:
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -197,10 +311,17 @@ System memory in use after: 93.3 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2534.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Total: 3.588400 ms (FindLiveObjects: 0.235200 ms CreateObjectMapping: 0.100600 ms MarkObjects: 3.177600 ms  DeleteObjects: 0.073700 ms)
 =======
 Total: 3.687000 ms (FindLiveObjects: 0.239600 ms CreateObjectMapping: 0.056800 ms MarkObjects: 3.299400 ms  DeleteObjects: 0.089500 ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+Total: 3.687000 ms (FindLiveObjects: 0.239600 ms CreateObjectMapping: 0.056800 ms MarkObjects: 3.299400 ms  DeleteObjects: 0.089500 ms)
+=======
+Total: 3.588400 ms (FindLiveObjects: 0.235200 ms CreateObjectMapping: 0.100600 ms MarkObjects: 3.177600 ms  DeleteObjects: 0.073700 ms)
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -215,6 +336,54 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Import Request.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  path: Assets/Scenes/Recorde.unity
+  artifactKey: Guid(b1cbfb47f6843024fa8b879c2aa5e5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Recorde.unity using Guid(b1cbfb47f6843024fa8b879c2aa5e5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd398c9bcafff12ad599f82578a107f0') in 0.013086 seconds 
+  Import took 0.016359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Scenes/TelaInicial.unity
+  artifactKey: Guid(311e9fc4b0a74e743a24233a8cc649d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TelaInicial.unity using Guid(311e9fc4b0a74e743a24233a8cc649d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ed98144c4647b16db4c703d26104310') in 0.003938 seconds 
+  Import took 0.007104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.685334 seconds.
+  path: Assets/Scenes/Ending.unity
+  artifactKey: Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ending.unity using Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0d2917b79069784421c61c4d71e0f70') in 0.004710 seconds 
+  Import took 0.009275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4559.086015 seconds.
+  path: Assets/Scenes/Ending.unity
+  artifactKey: Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ending.unity using Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad41bcd280213cf29126854c37e370d1') in 0.004654 seconds 
+  Import took 0.009869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001994 seconds.
+  path: Assets/Scenes/Ending.unity
+  artifactKey: Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ending.unity using Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad41bcd280213cf29126854c37e370d1') in 0.005198 seconds 
+  Import took 0.010232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 148.464635 seconds.
+  path: Assets/Scenes/TelaInicial.unity
+  artifactKey: Guid(311e9fc4b0a74e743a24233a8cc649d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TelaInicial.unity using Guid(311e9fc4b0a74e743a24233a8cc649d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c91494e7ad812a53f617c5a0e6d6c1eb') in 0.027580 seconds 
+  Import took 0.408211 seconds .
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
   path: Assets/Scenes
   artifactKey: Guid(6674a7d15a57ab44993efe48ba84c2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes using Guid(6674a7d15a57ab44993efe48ba84c2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfcb6635c1b4b790004bf78f70cf0b9') in 0.079717 seconds 
@@ -289,6 +458,7 @@ System memory in use after: 92.8 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2537.
 Total: 3.608300 ms (FindLiveObjects: 0.198500 ms CreateObjectMapping: 0.089000 ms MarkObjects: 3.298700 ms  DeleteObjects: 0.020800 ms)
+<<<<<<< HEAD
 =======
   path: Assets/Scenes/Recorde.unity
   artifactKey: Guid(b1cbfb47f6843024fa8b879c2aa5e5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -335,11 +505,22 @@ Received Import Request.
 Start importing Assets/Scenes/TelaInicial.unity using Guid(311e9fc4b0a74e743a24233a8cc649d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c91494e7ad812a53f617c5a0e6d6c1eb') in 0.027580 seconds 
   Import took 0.408211 seconds .
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Registered in 0.005769 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Registered in 0.004199 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -375,6 +556,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (15ms)
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2083 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 92.7 MB.
@@ -407,6 +589,146 @@ Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- Completed reload, in  1.341 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1342ms)
+		BeginReloadAssembly (247ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1014ms)
+			LoadAssemblies (200ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (373ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (337ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (251ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2083 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.7 MB.
+System memory in use after: 92.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2537.
+Total: 4.181700 ms (FindLiveObjects: 0.320700 ms CreateObjectMapping: 0.071800 ms MarkObjects: 3.759800 ms  DeleteObjects: 0.027800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005678 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.342 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1343ms)
+		BeginReloadAssembly (162ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1109ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (431ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (343ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (247ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2083 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.8 MB.
+System memory in use after: 92.9 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2540.
+Total: 3.547000 ms (FindLiveObjects: 0.240000 ms CreateObjectMapping: 0.057400 ms MarkObjects: 3.225200 ms  DeleteObjects: 0.022500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2060.577380 seconds.
+  path: Assets/Scenes/Ending.unity
+  artifactKey: Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ending.unity using Guid(3f6afc610cb42d04da06f182cafc4c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149c8de0068d98faeeea04eb66ca2c6a') in 0.016231 seconds 
+  Import took 0.020241 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.103 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1104ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (901ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (317ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (314ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 - Completed reload, in  1.314 seconds
 Domain Reload Profiling:
 	ReloadAssembly (1315ms)
@@ -486,6 +808,7 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (55ms)
 			SetupLoadedEditorAssemblies (398ms)
+<<<<<<< HEAD
 =======
 			CreateAndSetChildDomain (43ms)
 		EndReloadAssembly (1109ms)
@@ -495,10 +818,14 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (53ms)
 			SetupLoadedEditorAssemblies (343ms)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
+<<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (74ms)
 				ProcessInitializeOnLoadAttributes (247ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
@@ -565,6 +892,19 @@ Domain Reload Profiling:
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (231ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 				BeforeProcessingInitializeOnLoad (103ms)
 				ProcessInitializeOnLoadAttributes (267ms)
 				ProcessInitializeOnLoadMethodAttributes (9ms)
@@ -574,6 +914,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+<<<<<<< HEAD
 =======
 				BeforeProcessingInitializeOnLoad (67ms)
 				ProcessInitializeOnLoadAttributes (231ms)
@@ -585,6 +926,9 @@ Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2083 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 92.8 MB.
@@ -592,6 +936,11 @@ System memory in use after: 92.9 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2543.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Total: 4.274000 ms (FindLiveObjects: 0.279400 ms CreateObjectMapping: 0.061300 ms MarkObjects: 3.897800 ms  DeleteObjects: 0.033400 ms)
+=======
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 Total: 3.912000 ms (FindLiveObjects: 0.223400 ms CreateObjectMapping: 0.090200 ms MarkObjects: 3.574700 ms  DeleteObjects: 0.022300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -5444,9 +5793,13 @@ System memory in use after: 96.8 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2802.
 Total: 3.933400 ms (FindLiveObjects: 0.278500 ms CreateObjectMapping: 0.099100 ms MarkObjects: 3.534400 ms  DeleteObjects: 0.020300 ms)
+<<<<<<< HEAD
 =======
 Total: 4.274000 ms (FindLiveObjects: 0.279400 ms CreateObjectMapping: 0.061300 ms MarkObjects: 3.897800 ms  DeleteObjects: 0.033400 ms)
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -5458,4 +5811,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10.713584 seconds.
+  path: Assets/Scenes/Recorde.unity
+  artifactKey: Guid(b1cbfb47f6843024fa8b879c2aa5e5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Recorde.unity using Guid(b1cbfb47f6843024fa8b879c2aa5e5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1881007b4fac56b185e9d5198f01980c') in 0.015777 seconds 
+  Import took 0.020645 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

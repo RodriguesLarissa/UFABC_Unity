@@ -123,10 +123,17 @@ MonoBehaviour:
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 19589
 =======
   controlID: 2600
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  controlID: 2600
+=======
+  controlID: 19589
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,10 +159,17 @@ MonoBehaviour:
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 19590
 =======
   controlID: 2601
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  controlID: 2601
+=======
+  controlID: 19590
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,10 +195,17 @@ MonoBehaviour:
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 19591
 =======
   controlID: 2602
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+  controlID: 2602
+=======
+  controlID: 19591
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -411,10 +432,17 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: 746affff9c6affff666cffffb46cffffb683ffffa284ffff9c8afffff491ffffeaa0ffff38a6ffff64bdfffff6beffffdcc0ffff84c4ffffc4ceffff9ed0ffff2ad4ffff44d4ffff56d4ffff72daffff7ee2ffff8ce2ffff9ce2ffff18ebffff16ecffff2af9ffffe8f9ffff5044000030630000b6640000c6660000266d0000fa6f0000247d000000820000f6820000
 =======
       m_ExpandedIDs: 40f3ffff7cf3ffffb0f5ffffecf5ffff60f6ffff6ef6ffff7ef6ffff8ef6ffffa0f6ffffb0f6ffffbef6ffff2af9ffff40f9ffff56f9ffff42faffff5afaffff3cfbffff06440000
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+      m_ExpandedIDs: 40f3ffff7cf3ffffb0f5ffffecf5ffff60f6ffff6ef6ffff7ef6ffff8ef6ffffa0f6ffffb0f6ffffbef6ffff2af9ffff40f9ffff56f9ffff42faffff5afaffff3cfbffff06440000
+=======
+      m_ExpandedIDs: 746affff9c6affff666cffffb46cffffb683ffffa284ffff9c8afffff491ffffeaa0ffff38a6ffff64bdfffff6beffffdcc0ffff84c4ffffc4ceffff9ed0ffff2ad4ffff44d4ffff56d4ffff72daffff7ee2ffff8ce2ffff9ce2ffff18ebffff16ecffff2af9ffffe8f9ffff5044000030630000b6640000c6660000266d0000fa6f0000247d000000820000f6820000
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -606,6 +634,7 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 2e440000
     m_LastClickedID: 17454
     m_ExpandedIDs: 000000002244000000ca9a3b
@@ -614,6 +643,16 @@ MonoBehaviour:
     m_LastClickedID: 16970
     m_ExpandedIDs: 000000004042000000ca9a3b
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    m_SelectedIDs: 4a420000
+    m_LastClickedID: 16970
+    m_ExpandedIDs: 000000004042000000ca9a3b
+=======
+    m_SelectedIDs: 2e440000
+    m_LastClickedID: 17454
+    m_ExpandedIDs: 000000002244000000ca9a3b
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,10 +681,17 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000002244000000ca9a3b
 =======
     m_ExpandedIDs: 000000004042000000ca9a3b
 >>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+=======
+    m_ExpandedIDs: 000000004042000000ca9a3b
+=======
+    m_ExpandedIDs: 000000002244000000ca9a3b
+>>>>>>> 05fa7e94b4b3b51389a46af24ffdfdd6a57a8425
+>>>>>>> 93818ac0c255261535ecc3ba890c53e4e92a87ed
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
