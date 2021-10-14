@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -267, y: -191.49}
+  m_AnchoredPosition: {x: -267, y: -176}
   m_SizeDelta: {x: 189.9148, y: 60.9832}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139559888
@@ -350,7 +350,11 @@ RectTransform:
   - {fileID: 1718768223}
   - {fileID: 264932759}
   - {fileID: 139559887}
+<<<<<<< HEAD
   - {fileID: 1354110246}
+=======
+  - {fileID: 1934078214}
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -394,7 +398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -267, y: -72}
+  m_AnchoredPosition: {x: -267, y: -64}
   m_SizeDelta: {x: 189.9148, y: 60.9832}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264932760
@@ -520,6 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93580a87a1500d4f8aa0d0f783762f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manageCartas: {fileID: 0}
 --- !u!4 &555118163
 Transform:
   m_ObjectHideFlags: 0
@@ -628,7 +633,6 @@ GameObject:
   - component: {fileID: 956447921}
   - component: {fileID: 956447920}
   - component: {fileID: 956447919}
-  - component: {fileID: 956447922}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -684,12 +688,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!82 &956447922
+=======
+--- !u!1 &1209994219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209994221}
+  - component: {fileID: 1209994220}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1209994220
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 956447918}
   m_Enabled: 1
   serializedVersion: 4
@@ -697,12 +723,25 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 13e77777b49d2664981224b98956a32f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.45
+=======
+  m_GameObject: {fileID: 1209994219}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2070518973487024a815e5911c3a2081, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.317
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
+<<<<<<< HEAD
   Priority: 114
+=======
+  Priority: 128
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -780,12 +819,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &1354110245
 GameObject:
+=======
+--- !u!4 &1209994221
+Transform:
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354110246}
@@ -913,6 +958,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354110245}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1209994219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 636.4865, y: 234.50807, z: -58.139633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
 --- !u!1 &1414286887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,8 +1078,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -267, y: 41}
-  m_SizeDelta: {x: 189.92, y: 57.7965}
+  m_AnchoredPosition: {x: -267, y: 49}
+  m_SizeDelta: {x: 189.9148, y: 60.9832}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718768224
 MonoBehaviour:
@@ -1120,7 +1175,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718768222}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1948185157
+=======
+--- !u!1 &1934078213
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1128,22 +1187,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1948185158}
   - component: {fileID: 1948185160}
   - component: {fileID: 1948185159}
   m_Layer: 5
   m_Name: Text
+=======
+  - component: {fileID: 1934078214}
+  - component: {fileID: 1934078217}
+  - component: {fileID: 1934078216}
+  - component: {fileID: 1934078215}
+  m_Layer: 5
+  m_Name: "Cr\xE9ditos"
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &1948185158
+=======
+--- !u!224 &1934078214
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1948185157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1158,11 +1231,72 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948185159
+=======
+  m_GameObject: {fileID: 1934078213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 258688739}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 425, y: -196}
+  m_SizeDelta: {x: 189.9148, y: 60.9832}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1934078215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934078213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1934078216}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1934078216
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1948185157}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1171,12 +1305,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+=======
+  m_GameObject: {fileID: 1934078213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -1192,10 +1337,27 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Cr\xE9ditos"
 --- !u!222 &1948185160
+=======
+  m_Sprite: {fileID: 21300000, guid: eeaa15fbd9dbd7643ae80a67cab25f45, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1934078217
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1948185157}
+=======
+  m_GameObject: {fileID: 1934078213}
+>>>>>>> parent of 93818ac0 (Merge branch 'main' of github.com:RodriguesLarissa/UFABC_Unity)
   m_CullTransparentMesh: 1

@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class ManageCartas : MonoBehaviour
 {   
     public GameObject carta; // A carta a ser descartada
-    private bool primeiraCartaSelecionada, segundaCartaSelecionada, terceiraCartaSelecionada, quartaCartaSelecionada; // indicadores para cada carta escolhida em cada linha
-    private GameObject carta1, carta2, carta3, carta4; //gameobjects da 1° e 2° carta selecionada
-    private string linhaCarta1, linhaCarta2, linhaCarta3, linhaCarta4; //linha da carta selecionada
+    private bool primeiraCartaSelecionada, segundaCartaSelecionada; // indicadores para cada carta escolhida em cada linha
+    private GameObject carta1, carta2; //gameobjects da 1° e 2° carta selecionada
+    private string linhaCarta1, linhaCarta2; //linha da carta selecionada
 
     bool timerPausado, timerAcionado; //indicador de pausa no Timer ou Start Timer
     float timer; // variavel de tempo
@@ -18,31 +18,17 @@ public class ManageCartas : MonoBehaviour
     int numTentativas = 0; // número de tentativas na rodada
     int numAcertos = 0; // número de match de pares acertados
     AudioSource somOK; // som de acerto
-    int ultimoJogo = 0; // numero de tentativas do ultimo jogo
-    int recordHard = 0; // record do jogador do jogo dificil
-    int recordEasy = 0; // record do jogador do jogo facil e medio
+    int ultimoJogo = 0;
 
-    string dificuldade = ""; //dificuldade do jogo
-    
+
     // Start is called before the first frame update
-    public void Start()
+    void Start()
     {
-        MostraCartas(PlayerPrefs.GetInt("Dificuldade"));
+        MostraCartas(); 
         UpdateTentativas();   
         somOK = GetComponent<AudioSource>();
         ultimoJogo = PlayerPrefs.GetInt("Jogadas",0);
-        recordHard = PlayerPrefs.GetInt("RecordeHard",0);
-        recordEasy = PlayerPrefs.GetInt("RecordEasy",0);
         GameObject.Find("ultimaJogada").GetComponent<Text>().text = "Jogo Anterior = " + ultimoJogo;
-        switch (PlayerPrefs.GetInt("Dificuldade"))
-        {
-            case 4:
-                GameObject.Find("recorde").GetComponent<Text>().text = "Recorde Hard = " + recordHard;
-                break;
-            default:
-                GameObject.Find("recorde").GetComponent<Text>().text = "Recorde = " + recordEasy;
-                break;
-        }      
     }
 
     // Update is called once per frame
@@ -54,67 +40,26 @@ public class ManageCartas : MonoBehaviour
             if(timer>1){
                 timerPausado = true;
                 timerAcionado = false;
-                if(dificuldade.Equals("hard")){ //modo dificil
-                    if(carta1.tag == carta2.tag && carta3.tag == carta4.tag && carta2.tag == carta3.tag){
-                        Destroy(carta1);
-                        Destroy(carta2);
-                        Destroy(carta3);
-                        Destroy(carta4);
-                        numAcertos++;
-                        somOK.Play();
-                        if(numAcertos == 13){ //Caso seja um jogo Hard imprimi as configurações de hard game
-                            if(numTentativas < recordHard || recordHard == 0){
-                                PlayerPrefs.SetInt("Jogadas", numTentativas);
-                                PlayerPrefs.SetInt("RecordHard", numTentativas);
-                                SceneManager.LoadScene("Recorde");             
-                            }
-                            else {
-                                PlayerPrefs.SetInt("Jogadas", numTentativas);
-                                SceneManager.LoadScene("TelaInicial");  
-                            }
-                        }
-                    } 
-                    else {
-                        carta1.GetComponent<Tile>().EscondeCarta();
-                        carta2.GetComponent<Tile>().EscondeCarta();  
-                        carta3.GetComponent<Tile>().EscondeCarta();  
-                        carta4.GetComponent<Tile>().EscondeCarta();  
-                    }           
-                } else { //modo easy
-                    if(carta1.tag == carta2.tag){
-                        Destroy(carta1);
-                        Destroy(carta2);
-                        numAcertos++;
-                        somOK.Play();
-                        if(numAcertos == 13){ //Caso seja um jogo Easy imprimi as configurações de easy game
-                            if(numTentativas < recordEasy || recordEasy == 0){
-                                PlayerPrefs.SetInt("Jogadas", numTentativas);
-                                PlayerPrefs.SetInt("RecordEasy", numTentativas);
-                                SceneManager.LoadScene("Recorde");             
-                            }
-                            else {
-                                PlayerPrefs.SetInt("Jogadas", numTentativas);
-                                SceneManager.LoadScene("TelaInicial");  
-                            }
-                        }
+                if(carta1.tag == carta2.tag){
+                    Destroy(carta1);
+                    Destroy(carta2);
+                    numAcertos++;
+                    somOK.Play();
+                    if(numAcertos == 13){
+                        PlayerPrefs.SetInt("Jogadas", numTentativas);
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }
-                    else {
-                        carta1.GetComponent<Tile>().EscondeCarta();
-                        carta2.GetComponent<Tile>().EscondeCarta();             
-                    }         
-                }  
+                }
+                else {
+                    carta1.GetComponent<Tile>().EscondeCarta();
+                    carta2.GetComponent<Tile>().EscondeCarta();
+                }
                 primeiraCartaSelecionada = false;
                 segundaCartaSelecionada = false;
-                terceiraCartaSelecionada = false;
-                quartaCartaSelecionada = false;
                 carta1 = null;
                 carta2 = null;
-                carta3 = null;
-                carta4 = null;
                 linhaCarta1 = "";
                 linhaCarta2 = "";
-                linhaCarta3 = "";
-                linhaCarta4 = "";
                 timer = 0;
             }
         }
@@ -122,47 +67,14 @@ public class ManageCartas : MonoBehaviour
 
     /*
         O método MostraCartas() faz um loop para adicionar 13 cartas ao jogo.
-        Um switch case defini o modo que o jogo será exibido com sua dificuldade
     */
-    void MostraCartas(int opcaoCartas){
+    void MostraCartas(){
         int[] arrayEmbaralhado = criaArrayEmbaralhado();
         int[] arrayEmbaralhado2 = criaArrayEmbaralhado();
-        switch (opcaoCartas)
-        {
-            case 1: //modo de jogo com naipes vermelhos - easy
-                for(int i=0; i<13; i++){
-                    AddUmaCarta(0, i, arrayEmbaralhado[i], "Red", "clubs");
-                    AddUmaCarta(1, i, arrayEmbaralhado2[i], "Red", "spades");
-                    dificuldade = "easy";
-                }
-                break;
-            case 2: //modo de jogo com naipes pretos - easy
-                for(int i=0; i<13; i++){
-                    AddUmaCarta(0, i, arrayEmbaralhado[i], "Red", "diamonds");
-                    AddUmaCarta(1, i, arrayEmbaralhado2[i], "Red", "hearts");
-                    dificuldade = "easy";
-                }
-                break;
-            case 3: //modo de jogo com baralhos diferentes - easy (medium)
-                for(int i=0; i<13; i++){
-                    AddUmaCarta(0, i, arrayEmbaralhado[i], "Red", "clubs");
-                    AddUmaCarta(1, i, arrayEmbaralhado2[i], "Blue", "clubs");
-                    dificuldade = "easy";
-                }
-                break;
-            case 4: //modo de jogo baralho unico e 4 linhas - hard
-                int[] arrayEmbaralhado3 = criaArrayEmbaralhado();
-                int[] arrayEmbaralhado4 = criaArrayEmbaralhado();
-                           
-                for(int i=0; i<13; i++){
-                    AddUmaCarta(0, i, arrayEmbaralhado[i], "Red", "clubs");
-                    AddUmaCarta(1, i, arrayEmbaralhado2[i], "Red", "spades");
-                    AddUmaCarta(2, i, arrayEmbaralhado3[i], "Red", "hearts");
-                    AddUmaCarta(3, i, arrayEmbaralhado4[i], "Red", "diamonds");
-                    dificuldade = "hard";
-                }
-                break;
-        }   
+        for(int i=0; i<13; i++){
+            AddUmaCarta(0, i, arrayEmbaralhado[i]);
+            AddUmaCarta(1, i, arrayEmbaralhado2[i]);
+        }
     }
 
     /*
@@ -171,7 +83,7 @@ public class ManageCartas : MonoBehaviour
         Através de uma condicional, avaliamos qual é o rank da carta para definir qual será a Sprite recebida pela carta. Por exemplo, caso o rank seja 0, a Sprite selecionada será a que possui o nome ace_of_clubs.
         Por fim, a Sprite é recarregada e chamamos a função setCartaOriginal com a nova Sprite que será colocada no tile.
     */
-    private void AddUmaCarta(int linha, int rank, int valor, string corBaralho, string naipe){
+    private void AddUmaCarta(int linha, int rank, int valor){
         GameObject centro = GameObject.Find("centroDaTela");
         float escalaCartaOriginal = carta.transform.localScale.x;
         float fatorEscalaX = (650 * escalaCartaOriginal)/110.0f; 
@@ -200,13 +112,15 @@ public class ManageCartas : MonoBehaviour
         else{
             numeroCarta = "" + (valor+1);
         }
-    
-        Sprite s1 = (Sprite)(Resources.Load<Sprite>(numeroCarta + "_of_" + naipe));
-        Sprite s2 = (Sprite)(Resources.Load<Sprite>("playCardBack" + corBaralho));
+
+        nomeDaCarta = numeroCarta + "_of_clubs";
+        // if (linha == 0)
+        //     nomeDaCarta = numeroCarta + "_of_clubs";
+        // else 
+        //     nomeDaCarta = numeroCarta + "_of_hearts";
+        Sprite s1 = (Sprite)(Resources.Load<Sprite>(nomeDaCarta));
         print("S1: " + s1);
         GameObject.Find("" + linha + "_" + valor).GetComponent<Tile>().setCartaOriginal(s1);
-        GameObject.Find("" + linha + "_" + valor).GetComponent<Tile>().setBaralho(s2);
-        
 
     }
 
@@ -229,66 +143,24 @@ public class ManageCartas : MonoBehaviour
         return novoArray;
     }
 
-    /* O método CartaSeleciona é chamado ao virar um carta no jogo, nele é feita as verificações
-    se o conjunto de cartas selecionadas são iguais. Funciona para cada modo de dificuldade.
-    */
     public void CartaSeleciona(GameObject carta){
-        switch (dificuldade)
-        {
-            case "easy": //modo de jogo com 2 linhas
-                if(!primeiraCartaSelecionada){
-                    string linha = carta.name.Substring(0, 1);
-                    linhaCarta1 = linha;
-                    primeiraCartaSelecionada = true;
-                    carta1 = carta;
-                    carta1.GetComponent<Tile>().RevelaCarta();
-                }
-                else if (primeiraCartaSelecionada && !segundaCartaSelecionada){
-                    string linha = carta.name.Substring(0, 1);
-                    linhaCarta2 = linha;
-                    segundaCartaSelecionada = true;
-                    carta2 = carta;
-                    carta2.GetComponent<Tile>().RevelaCarta();
-                    VerificaCartas();
-                }
-                break;
-            case "hard": //modo de jogo com 4 linhas
-                    if(!primeiraCartaSelecionada){
-                    string linha = carta.name.Substring(0, 1);
-                    linhaCarta1 = linha;
-                    primeiraCartaSelecionada = true;
-                    carta1 = carta;
-                    carta1.GetComponent<Tile>().RevelaCarta();
-                }
-                else if (primeiraCartaSelecionada && !segundaCartaSelecionada){
-                    string linha = carta.name.Substring(0, 1);
-                    linhaCarta2 = linha;
-                    segundaCartaSelecionada = true;
-                    carta2 = carta;
-                    carta2.GetComponent<Tile>().RevelaCarta();                  
-                }
-                else if (primeiraCartaSelecionada && segundaCartaSelecionada && !terceiraCartaSelecionada){
-                    string linha = carta.name.Substring(0, 1);
-                    linhaCarta3 = linha;
-                    terceiraCartaSelecionada = true;
-                    carta3 = carta;
-                    carta3.GetComponent<Tile>().RevelaCarta();                  
-                }
-                else if (primeiraCartaSelecionada && segundaCartaSelecionada && terceiraCartaSelecionada && !quartaCartaSelecionada){
-                    string linha = carta.name.Substring(0, 1);
-                    linhaCarta4 = linha;
-                    quartaCartaSelecionada = true;
-                    carta4 = carta;
-                    carta4.GetComponent<Tile>().RevelaCarta(); 
-                    VerificaCartas();                 
-                }
-                break;             
+        if(!primeiraCartaSelecionada){
+            string linha = carta.name.Substring(0, 1);
+            linhaCarta1 = linha;
+            primeiraCartaSelecionada = true;
+            carta1 = carta;
+            carta1.GetComponent<Tile>().RevelaCarta();
+        }
+        else if (primeiraCartaSelecionada && !segundaCartaSelecionada){
+            string linha = carta.name.Substring(0, 1);
+            linhaCarta2 = linha;
+            segundaCartaSelecionada = true;
+            carta2 = carta;
+            carta2.GetComponent<Tile>().RevelaCarta();
+            VerificaCartas();
         }
     }
 
-    /* O método VerificaCartas é um intermediário e serve para diparar o timer e contar o número de
-    tentativas da rodada atual, junto com os métodos subsequentes.
-    */
     public void VerificaCartas(){
         DisparaTimer();
         numTentativas++;
