@@ -57,4 +57,11 @@ public class Tile : MonoBehaviour
         originalCarta = novaCarta;
     }
 
+    /* 
+        O método setBaralho defini a sprite de fundo do baralho (azul ou vermelho)
+    */
+    public void setBaralho(Sprite novaCarta){
+        backCarta = novaCarta;
+    }
+
 }
