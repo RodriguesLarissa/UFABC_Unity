@@ -48,3 +48,9 @@ TagManager:
   - name: Objetos
     uniqueID: 1411179599
     locked: 0
+  - name: Lago
+    uniqueID: 2549528947
+    locked: 0
+  - name: Caractere
+    uniqueID: 374956377
+    locked: 0
