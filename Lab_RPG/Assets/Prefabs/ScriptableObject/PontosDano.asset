@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeedc89983b25e68a82333af2a0b3bd1, type: 3}
   m_Name: PontosDano
   m_EditorClassIdentifier: 
-  valor: 6
+  value: 7

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coin
   m_EditorClassIdentifier: 
   itemName: Moeda
-  sprite: {fileID: 0}
+  sprite: {fileID: 3906112111664580409, guid: 2ddd01d32ad95f53c9ceb36b9ec8cc98, type: 3}
   effectiveQuantity: 1
   stackable: 1
   itemType: 0
