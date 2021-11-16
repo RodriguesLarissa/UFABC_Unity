@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item Coletável")]
+/// <summary>
+/// Classe para indicar os itens coletaveis no jogo, como coraÃ§Ãµes e moedas.
+/// </summary>
+
+[CreateAssetMenu(menuName = "Item Coletï¿½vel")]
 public class CollectibleItem : ScriptableObject
 {
     public string itemName;        // nome do item
     public Sprite sprite;          // imagem do item
     public int effectiveQuantity;  // quantidade efetiva que o item adiciona a algum atributo/conjunto
-    public bool stackable;         // indica se um conjunto do item ocupa um espaço (true) ou mais (false) 
-    public enum ItemType            // enumerados que indica os tipos disponíveis para os itens
+    public bool stackable;         // indica se um conjunto do item ocupa um espaï¿½o (true) ou mais (false) 
+    public enum ItemType            // enumerados que indica os tipos disponï¿½veis para os itens
     {
         MONEY,
         HEALTH,

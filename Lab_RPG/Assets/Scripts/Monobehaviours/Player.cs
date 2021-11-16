@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Player : Character   
 {
-
+    public Inventario inventarioPrefab;
+    Inventario inventario;
+    public HealthBar healthBarPrefab;
+    HealthBar healthBar;
     public int money;
     void Start()
     {
-        
+        inventario = Instantiate(inventarioPrefab);
+        healthPoints.value = initialhealthPoints;
+        healthBar.caractere = this;
+        healthBar = Instantiate(healthBarPrefab);
     }
 
     // Update is called once per frame
@@ -19,31 +25,48 @@ public class Player : Character
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Collectible")) // verifica se é um item coletável
+        if (collision.gameObject.CompareTag("Collectible")) // verifica se ï¿½ um item coletï¿½vel
         {
             CollectItem(collision);
         }
     }
     /*
-     * Essa função é responsável por receber um item coletável a partir de uma colisão e definir para ele
+     * Essa funï¿½ï¿½o ï¿½ responsï¿½vel por receber um item coletï¿½vel a partir de uma colisï¿½o e definir para ele
      * um processamento apropriado de acordo com o seu tipo
      */
-    public void CollectItem(Collider2D collision) {
-
+    public void CollectItem(Collider2D collision) 
+    {
         CollectibleItem collectedItem = collision.gameObject.GetComponent<Collectible>().item;
-        switch (collectedItem.itemType)  // verifica o tipo do item coletável para realizar o evento apropriado
+        if (collectedItem != null)
         {
-            case CollectibleItem.ItemType.MONEY:                                 // caso uma moeda seja coletada
-                print("Você coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
-                this.money++;
-                print("Agora você tem " + money + " moedas!");
-                collision.gameObject.SetActive(false);
-                break;
-            default:
-                print("Ainda não há uma definição adequada para coletar itens do tipo " + collectedItem.itemType);
-                collision.gameObject.SetActive(false);
-                break;
+            bool shouldDissapear = false;
+            // verifica o tipo do item coletï¿½vel para realizar o evento apropriado
+            switch (collectedItem.itemType)  
+            {
+                case CollectibleItem.ItemType.MONEY: // caso uma moeda seja coletada
+                    shouldDissapear = inventario.AddItem(collectedItem);
+                    print("Vocï¿½ coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    this.money++;
+                    print("Agora vocï¿½ tem " + money + " moedas!");
+                    break;
+                case CollectibleItem.ItemType.HEALTH:
+                    shouldDissapear = AjustePontosDano(collectedItem.effectiveQuantity);
+                    break;
+                default:
+                    print("Ainda nï¿½o hï¿½ uma definiï¿½ï¿½o adequada para coletar itens do tipo " + collectedItem.itemType);
+                    break;
+            }
+            if (shouldDissapear) collision.gameObject.SetActive(false);
         }
     }
 
+    public bool AjustePontosDano(int quantidade) 
+    {
+        if (healthPoints.value < maxHealthPoints)
+        {
+            healthPoints.value += quantidade;
+            print("Ajustando Pontos Dano por: " + quantidade + ". Novo Valor = " + healthPoints.value);
+            return true;
+        } return false;
+    }
 }

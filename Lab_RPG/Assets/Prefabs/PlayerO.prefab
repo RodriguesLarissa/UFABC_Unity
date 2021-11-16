@@ -178,6 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc007f56a0f4a046a54a54e425cc214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 3
-  maxHealthPoints: 3
+  healthPoints: {fileID: 11400000, guid: 87d9eb97544e14a74904dcf154fc8c64, type: 2}
+  initialhealthPoints: 6
+  maxHealthPoints: 10
+  inventarioPrefab: {fileID: 4430506114169407111, guid: 59b48afbba183692f913bd32bd9ae7a3, type: 3}
+  healthBarPrefab: {fileID: 3913564324298418773, guid: fc8e1e0dfb6463ea8be3ebe942c12564, type: 3}
   money: 0
