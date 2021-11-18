@@ -9,6 +9,44 @@ public class Player : Character
     public HealthBar healthBarPrefab;
     HealthBar healthBar;
     public int money;
+    public PontosDano healthPoints; // Quantidade atual de pontos de vida
+
+    public override IEnumerator DanoCaractere(int dano, float intervalo) 
+    {
+        while (true)
+        {
+            healthPoints.value = healthPoints.value - dano;
+            if (healthPoints.value <= float.Epsilon)
+            {
+                base.KillCharacter();
+                break;
+            }
+            if (intervalo > float.Epsilon)
+            {
+                yield return new WaitForSeconds(intervalo);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
+    public override void KillCharacter()
+    {
+        base.KillCharacter();
+        Destroy(healthBar.gameObject);
+        Destroy(inventario.gameObject);
+    }
+
+    public override void ResetCharacter()
+    {
+        inventario = Instantiate(inventarioPrefab);
+        healthPoints.value = initialhealthPoints;
+        healthBar.caractere = this;
+        healthBar = Instantiate(healthBarPrefab);
+    }
+
     void Start()
     {
         inventario = Instantiate(inventarioPrefab);

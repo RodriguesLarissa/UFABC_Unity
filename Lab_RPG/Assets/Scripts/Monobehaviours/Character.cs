@@ -8,7 +8,15 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    public PontosDano healthPoints; // Quantidade atual de pontos de vida
     public int initialhealthPoints; // Quantidade inicial de pontos de vida
     public int maxHealthPoints; // Quantidade Máxima de pontos de vida
+
+    public virtual void KillCharacter()
+    {
+        Destroy(gameObject);
+    }
+
+    public abstract void ResetCharacter();
+
+    public abstract IEnumerator DanoCaractere(int dano, float intervalo);
 }

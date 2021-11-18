@@ -36,16 +36,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Monobehaviours\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\Monobehaviours\Inventario.cs" />
      <Compile Include="Assets\Scripts\Monobehaviours\Collectible.cs" />
+     <Compile Include="Assets\Scripts\Monobehaviours\Slot.cs" />
      <Compile Include="Assets\Scripts\Monobehaviours\Player.cs" />
      <Compile Include="Assets\Scripts\Monobehaviours\Character.cs" />
      <Compile Include="Assets\Scripts\Monobehaviours\MovimentaPlayer.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\CollectibleItem.cs" />
-     <Compile Include="Assets\Scripts\Monobehaviours\ArredondaPosCamera.cs" />
-     <Compile Include="Assets\Scripts\Monobehaviours\Slot.cs" />
-     <Compile Include="Assets\Scripts\Monobehaviours\HealthBar.cs" />
-     <Compile Include="Assets\Scripts\Monobehaviours\Inventario.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\PontosDano.cs" />
+     <Compile Include="Assets\Scripts\Monobehaviours\ArredondaPosCamera.cs" />
+     <Compile Include="Assets\Scripts\Managers\RPGGameManager.cs" />
+     <Compile Include="Assets\Scripts\Monobehaviours\PontoSpawn.cs" />
+     <Compile Include="Assets\Scripts\Managers\RPGCameraManager.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Inimigo.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/marcelocfsf/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
