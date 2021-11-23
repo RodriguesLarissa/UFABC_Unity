@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Classe que representa a interface em que os pontos de vida do jogador principal são exibidos
+/// </summary>
+
 public class HealthBar : MonoBehaviour
 {
-    public PontosDano pontosDano;
-    public Player caractere;
-    public Image medidorImagem;
+    public PontosDano pontosDano;   //valor atual de pontos de vida do player
+    public Player caractere;        //referência ao player
+    public Image medidorImagem;     
     public Text pdTexto;
-    float maxPontosDano;
+    float maxPontosDano;            //valor máximo de pontos de vida que o player pode acumular
+
     // Start is called before the first frame update
     void Start()
     {

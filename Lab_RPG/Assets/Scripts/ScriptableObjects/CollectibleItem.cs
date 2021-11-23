@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Classe para indicar os itens coletaveis no jogo, como corações e moedas.
+/// Classe para armazenar as informações dos itens coletaveis no jogo, como corações e moedas.
 /// </summary>
 
 [CreateAssetMenu(menuName = "Item Colet�vel")]

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+/// <summary>
+/// Classe responsável por corrigir questões relacionadas à imagem renderizada pela Câmera Virtual
+/// </summary>
 public class ArredondaPosCamera : CinemachineExtension
 {
     public float PixelsPerUnit = 32;
