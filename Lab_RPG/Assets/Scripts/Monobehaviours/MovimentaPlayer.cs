@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Classe responsável por controlar e atualizar os estados de animação do Player
+/// </summary>
 public class MovimentaPlayer : MonoBehaviour
 {
     public float VelocidadeMovimento = 3.0f; // equivale ao momento (impulso) a ser dado ao player
@@ -36,6 +39,9 @@ public class MovimentaPlayer : MonoBehaviour
         MoveCaractere();
     }
 
+    /*
+     * Método responsável por receber o input do jogador e movimentar o Player
+     */
     private void MoveCaractere(){
         Movimento.x = Input.GetAxisRaw("Horizontal");
         Movimento.y = Input.GetAxisRaw("Vertical");
@@ -43,6 +49,9 @@ public class MovimentaPlayer : MonoBehaviour
         rb2D.velocity = Movimento * VelocidadeMovimento;  
     }
 
+    /*
+     * Método responsável por receber atualizar o estado de animação do Player com base na sua movimentação
+     */
     private void UpdateEstado(){
         if(Movimento.x > 0)
             animator.SetInteger(EstadoAnimacao, (int)EstadosCaractere.andaLeste);

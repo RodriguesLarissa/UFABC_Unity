@@ -8,9 +8,9 @@ using UnityEngine;
 
 public class PontoSpawn : MonoBehaviour
 {
-    public GameObject prefabParaSpawn;
+    public GameObject prefabParaSpawn; //referência ao GameObject que deve ser carregado em determinado ponto
+    public float intervaloRepeticao;   // frequência em que uma entidade desse GameObject deve ser carregada
 
-    public float intervaloRepeticao;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,9 @@ public class PontoSpawn : MonoBehaviour
         }
     }
 
+    /*
+     *  Método responsável por carregar o GameObject em questão no ponto para spawn (adicionado manualmente à cena)
+     */
     public GameObject SpawnO()
     {
         if (prefabParaSpawn != null)
@@ -29,9 +32,4 @@ public class PontoSpawn : MonoBehaviour
         return null;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

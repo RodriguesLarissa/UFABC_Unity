@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : Character   
 {
-    public Inventario inventarioPrefab;
-    Inventario inventario;
-    public HealthBar healthBarPrefab;
-    HealthBar healthBar;
-    public int money;
+    public Inventario inventarioPrefab; // Armazena o prefab do Inventário
+    Inventario inventario;              // Referência ao GameObject Inventário pertencente ao Player
+    public HealthBar healthBarPrefab;   // Armazena o prefab da HealthBar do Player
+    HealthBar healthBar;                // Referência ao GameObject HealthBar pertencente ao Player
+    public int money;                   // TESTE: armazenar moedas
     public PontosDano healthPoints; // Quantidade atual de pontos de vida
 
+    
     public override IEnumerator DanoCaractere(int dano, float intervalo) 
     {
         while (true)
@@ -18,7 +19,7 @@ public class Player : Character
             healthPoints.value = healthPoints.value - dano;
             if (healthPoints.value <= float.Epsilon)
             {
-                base.KillCharacter();
+                KillCharacter();
                 break;
             }
             if (intervalo > float.Epsilon)
@@ -32,27 +33,33 @@ public class Player : Character
         }
     }
 
+    /*
+     * Método responsável por destruir os GameObjects associados ao Player quando esse morre
+     */
     public override void KillCharacter()
     {
-        base.KillCharacter();
         Destroy(healthBar.gameObject);
         Destroy(inventario.gameObject);
+        base.KillCharacter();
     }
 
+    /*
+     * Método responsável por reiniciar os GameObjects associados ao Player: Inventário e HealthBar
+     */
     public override void ResetCharacter()
     {
         inventario = Instantiate(inventarioPrefab);
         healthPoints.value = initialhealthPoints;
-        healthBar.caractere = this;
         healthBar = Instantiate(healthBarPrefab);
+        healthBar.caractere = this;
     }
 
     void Start()
     {
         inventario = Instantiate(inventarioPrefab);
         healthPoints.value = initialhealthPoints;
-        healthBar.caractere = this;
         healthBar = Instantiate(healthBarPrefab);
+        healthBar.caractere = this;
     }
 
     // Update is called once per frame
@@ -60,7 +67,9 @@ public class Player : Character
     {
         
     }
-
+    /*
+     * Método associado às colisões do Player: sua interação com outros GameObjects em cena
+     */
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Collectible")) // verifica se � um item colet�vel
@@ -68,6 +77,7 @@ public class Player : Character
             CollectItem(collision);
         }
     }
+   
     /*
      * Essa fun��o � respons�vel por receber um item colet�vel a partir de uma colis�o e definir para ele
      * um processamento apropriado de acordo com o seu tipo
@@ -98,6 +108,9 @@ public class Player : Character
         }
     }
 
+    /*
+     * Método responsável por atualizar a quantidade de Pontos de Vida do Player
+     */ 
     public bool AjustePontosDano(int quantidade) 
     {
         if (healthPoints.value < maxHealthPoints)
