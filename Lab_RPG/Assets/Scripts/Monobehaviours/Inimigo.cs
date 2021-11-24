@@ -20,12 +20,12 @@ public class Inimigo : Character
 
     private void OnEnable() 
     {
-        ResetCharacter();
+        ResetCharacter();      
     }
 
     /*
-     * Método associado ao(s) collider(s) dos inimigos que indica as ações que devem ocorrer quando esses
-     * começam a interagir(em) com outros GameObjects no jogo
+     * Mï¿½todo associado ao(s) collider(s) dos inimigos que indica as aï¿½ï¿½es que devem ocorrer quando esses
+     * comeï¿½am a interagir(em) com outros GameObjects no jogo
      */ 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -40,7 +40,7 @@ public class Inimigo : Character
     }
 
     /*
-     * Método associado ao(s) collider(s) dos inimigos que indica as ações que devem ocorrer quando esses
+     * Mï¿½todo associado ao(s) collider(s) dos inimigos que indica as aï¿½ï¿½es que devem ocorrer quando esses
      * terminam de interagir(em) com outros GameObjects no jogo
      */
     private void OnCollisionExit2D(Collision2D collision) {
@@ -76,7 +76,7 @@ public class Inimigo : Character
     }
 
     /*
-     * Método que indica como os atributos associados ao INimigos devem ser recarregados
+     * Mï¿½todo que indica como os atributos associados ao INimigos devem ser recarregados
      */
     public override void ResetCharacter()
     {
