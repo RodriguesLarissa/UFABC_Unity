@@ -17,9 +17,12 @@ public class Armas : MonoBehaviour
 
     Camera cameraLocal;
 
+    /*O Slope serve para indicar qual o quadrante do mouse, considerando cada slope temos quatro combinações que correspondem aos quatro pontos cardeais, de maneira ilustrativa seriam: (slopePositivo, slopeNegativo)
+    (!slopePositivo, slopeNegativo), (slopePositivo, !slopeNegativo) e (!slopePositivo, !slopeNegativo)*/
     float slopePositivo;
     float slopeNegativo;
 
+    /*Declara os quadrantes para indicar futuramente qual animação usar baseado na posição do mouse em cada um*/
     enum Quadrante
     {
         Leste,
@@ -28,6 +31,7 @@ public class Armas : MonoBehaviour
         Norte
     }
 
+    // Start is called before the first frame update, inicializando o que irá indicar em qual quadrante se encontra o cursor do mouse*/
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -41,6 +45,7 @@ public class Armas : MonoBehaviour
         slopeNegativo = PegaSlope(acimaEsquerda, abaixoDireita);
     }
 
+    /* Checa se o cursor está acima do slope positivo e retorna*/
     bool AcimaSlopePositivo(Vector2 posicaoEntrada)
     {
         Vector2 posicaoPlayer = gameObject.transform.position;
@@ -50,6 +55,7 @@ public class Armas : MonoBehaviour
         return entradaInterseccao > interseccaoY;
     }
 
+    /* Checa se o cursor está acima do slope negativo e retorna*/
     bool AcimaSlopeNegativo(Vector2 posicaoEntrada)
     {
         Vector2 posicaoPlayer = gameObject.transform.position;
@@ -59,6 +65,7 @@ public class Armas : MonoBehaviour
         return entradaInterseccao > interseccaoY;
     }
 
+    /* Aqui ele finalmente checa em qual ponto cardeal se encontra o cursor baseado nos slopes*/
     Quadrante PegaQuadrante()
     {
         Vector2 posicaoMouse = Input.mousePosition;
@@ -83,6 +90,7 @@ public class Armas : MonoBehaviour
         }
     }
 
+    /*Indica a animação de atirar baseado no quadrante do cursor*/
     void UpdateEstado()
     {
         if (atirando)
@@ -114,10 +122,11 @@ public class Armas : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Atirando", true);
+            animator.SetBool("Atirando", false);
         }
     }
 
+    /*Instancia a munição*/
     public void Awake(){
         if(municaoPiscina == null){
             municaoPiscina = new List<GameObject>();
@@ -130,6 +139,7 @@ public class Armas : MonoBehaviour
         }
     }
 
+    // Update is called once per frame, recebe o click do botão e atualizaa posição do cursor*/
     private void Update()
     {
         if(Input.GetMouseButtonDown(0)){
@@ -139,6 +149,7 @@ public class Armas : MonoBehaviour
         UpdateEstado();
     }
 
+    /*Como o nome indica, retorna os valores dos Slopes*/
     float PegaSlope(Vector2 ponto1, Vector2 ponto2)
     {
         return (ponto2.y - ponto1.y) / (ponto2.x - ponto1.x);
@@ -156,6 +167,7 @@ public class Armas : MonoBehaviour
         return null;
     }
 
+    /*Coordena a animação da munição, que é atirada em trajetória de arco*/
     void DisparaMunicao(){
         Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         GameObject municao = SpawnMunicao(transform.position);
