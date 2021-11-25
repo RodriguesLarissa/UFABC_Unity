@@ -16,6 +16,7 @@ public class Player : Character
     {
         while (true)
         {
+            StartCoroutine(FlickerCaractere());
             healthPoints.value = healthPoints.value - dano;
             if (healthPoints.value <= float.Epsilon)
             {

@@ -20,6 +20,13 @@ public abstract class Character : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public virtual IEnumerator FlickerCaractere()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
     /*
      * Método abstrato que será implementado para cada tipo de caracter indicando como seus atributos devem ser reiniciados
      */

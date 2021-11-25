@@ -58,6 +58,7 @@ public class Inimigo : Character
     {
         while (true)
         {
+            StartCoroutine(FlickerCaractere());
             healthPoints = healthPoints - dano;
             if (healthPoints <= float.Epsilon)
             {
