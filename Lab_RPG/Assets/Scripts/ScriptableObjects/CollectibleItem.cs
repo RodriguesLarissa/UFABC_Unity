@@ -17,7 +17,10 @@ public class CollectibleItem : ScriptableObject
     {
         MONEY,
         HEALTH,
-        FOOD,
+        EMERALD,
+        GREENMONEY,
+        DIAMOND,
+        RUBY,
         RESOURCES
     }
     public ItemType itemType;       // indica o tipo do item para que esse seja assimilado de forma adequada

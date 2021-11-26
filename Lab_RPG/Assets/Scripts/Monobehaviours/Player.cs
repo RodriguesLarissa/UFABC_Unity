@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Character   
 {
@@ -9,6 +10,7 @@ public class Player : Character
     public HealthBar healthBarPrefab;   // Armazena o prefab da HealthBar do Player
     HealthBar healthBar;                // Referência ao GameObject HealthBar pertencente ao Player
     public int money;                   // TESTE: armazenar moedas
+    public int totalColetaveis = 0;
     public PontosDano healthPoints; // Quantidade atual de pontos de vida
 
     
@@ -39,9 +41,7 @@ public class Player : Character
      */
     public override void KillCharacter()
     {
-        Destroy(healthBar.gameObject);
-        Destroy(inventario.gameObject);
-        base.KillCharacter();
+        SceneManager.LoadScene("Tela_Derrota");
     }
 
     /*
@@ -66,7 +66,7 @@ public class Player : Character
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     /*
      * Método associado às colisões do Player: sua interação com outros GameObjects em cena
@@ -96,7 +96,36 @@ public class Player : Character
                     shouldDissapear = inventario.AddItem(collectedItem);
                     print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
+                    this.totalColetaveis++;
                     print("Agora voc� tem " + money + " moedas!");
+                    break;
+                case CollectibleItem.ItemType.GREENMONEY: // caso uma moeda verde seja coletada
+                    shouldDissapear = inventario.AddItem(collectedItem);
+                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    this.money++;
+                    this.totalColetaveis++;
+                    print("Agora voc� tem " + money + " moedas verdes!");
+                    break;
+                case CollectibleItem.ItemType.EMERALD: // caso uma esmeralda seja coletada
+                    shouldDissapear = inventario.AddItem(collectedItem);
+                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    this.money++;
+                    this.totalColetaveis++;
+                    print("Agora voc� tem " + money + " comidas!");
+                    break;
+                case CollectibleItem.ItemType.DIAMOND: // caso um diamante seja coletada
+                    shouldDissapear = inventario.AddItem(collectedItem);
+                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    this.money++;
+                    this.totalColetaveis++;
+                    print("Agora voc� tem " + money + " diamantes!");
+                    break;
+                case CollectibleItem.ItemType.RUBY: // caso um ruby seja coletada
+                    shouldDissapear = inventario.AddItem(collectedItem);
+                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    this.money++;
+                    this.totalColetaveis++;
+                    print("Agora voc� tem " + money + " rubis!");
                     break;
                 case CollectibleItem.ItemType.HEALTH:
                     shouldDissapear = AjustePontosDano(collectedItem.effectiveQuantity);
@@ -106,6 +135,7 @@ public class Player : Character
                     break;
             }
             if (shouldDissapear) collision.gameObject.SetActive(false);
+            if (this.totalColetaveis == 10) SceneManager.LoadScene("Tela_Vitoria");
         }
     }
 

@@ -16,4 +16,4 @@ MonoBehaviour:
   sprite: {fileID: 7301479720404975506, guid: 5c83d96ac374bf34e97796b762559b0f, type: 3}
   effectiveQuantity: 1
   stackable: 1
-  itemType: 0
+  itemType: 5
