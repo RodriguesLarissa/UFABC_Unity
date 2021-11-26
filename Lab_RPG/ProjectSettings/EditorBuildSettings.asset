@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Tela_Vitoria.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/Creditos.unity
-    guid: cdd71892580a94f44bd3eb48d657ba2d
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Tela_Inicial.unity
     guid: b2a6150e2a9480d48ae05ae77913284b
@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Tela_Derrota.unity
     guid: ac0a25cc3dc1457479c386045bacc366
   - enabled: 1
-    path: Assets/Scenes/Lab_RPG_Setup.unity
+    path: Assets/Scenes/Easy_Mode.unity
     guid: 07caed369a255db47a0e1d2f23d0211a
+  - enabled: 1
+    path: Assets/Scenes/Hard_Mode.unity
+    guid: 0962f19d9b1c2f0198ad8de79dab81c6
   - enabled: 1
     path: Assets/Scenes/Cred.unity
     guid: 1f817ea809df8fb4a90a59fee0a6cacc

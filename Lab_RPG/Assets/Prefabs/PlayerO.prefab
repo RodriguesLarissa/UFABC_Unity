@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -154685485
-  m_SortingLayer: 1
+  m_SortingLayerID: 374956377
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 5012491988584609388, guid: 983744d986e43ca4d9891709155e2d41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -180,10 +180,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialhealthPoints: 6
+  pontosDano: {fileID: 0}
   maxHealthPoints: 10
+  inicioPontosDano: 0
+  MaxPontosDano: 0
   inventarioPrefab: {fileID: 4430506114169407111, guid: 59b48afbba183692f913bd32bd9ae7a3, type: 3}
   healthBarPrefab: {fileID: 3913564324298418773, guid: fc8e1e0dfb6463ea8be3ebe942c12564, type: 3}
   money: 0
+  totalColetaveis: 0
   healthPoints: {fileID: 11400000, guid: 87d9eb97544e14a74904dcf154fc8c64, type: 2}
 --- !u!114 &4374688364588711941
 MonoBehaviour:
@@ -200,3 +204,4 @@ MonoBehaviour:
   municaoPrefab: {fileID: 1035793182981818189, guid: 2e8962c3160053740ba90478721ad7eb, type: 3}
   tamanhoPiscina: 7
   velocidadeArma: 2
+  animator: {fileID: 0}

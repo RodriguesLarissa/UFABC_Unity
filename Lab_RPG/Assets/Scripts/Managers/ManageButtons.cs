@@ -18,11 +18,11 @@ public class ManageButtons : MonoBehaviour
     }
 
     public void gameEasy(){
-        SceneManager.LoadScene("Lab_RPG_Setup"); // Ao clicar no botão, irá para a cena do jogo
+        SceneManager.LoadScene("Easy_Mode"); // Ao clicar no botão, irá para a cena do jogo
     }
 
     public void gameHard(){
-        //SceneManager.LoadScene("Lab3"); // Ao clicar no botão, irá para a cena do jogo  
+        SceneManager.LoadScene("Hard_Mode"); // Ao clicar no botão, irá para a cena do jogo  
     }
 
     public void Creditos(){

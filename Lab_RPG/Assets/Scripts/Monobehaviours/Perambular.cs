@@ -30,7 +30,6 @@ public class Perambular : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         StartCoroutine(RotinaPerambular());
         circleCollider = GetComponent<CircleCollider2D>();    
-        GetComponent<CircleCollider2D>().enabled = false;  // desativa o circle collider collison, o collider passa a ser o box collider
     }
 
     /*Define o que ocorre caso o colisor seja nulo*/
