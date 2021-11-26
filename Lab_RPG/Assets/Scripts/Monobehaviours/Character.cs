@@ -20,6 +20,7 @@ public abstract class Character : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //Define a animação de flickr para indicar que o personagem ou o inimigo tomou dano
     public virtual IEnumerator FlickerCaractere()
     {
         GetComponent<SpriteRenderer>().color = Color.red;

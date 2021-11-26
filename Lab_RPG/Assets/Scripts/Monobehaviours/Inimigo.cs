@@ -18,6 +18,7 @@ public class Inimigo : Character
         
     }
 
+    //Chama o metodo que reseta os valores do personagem para um novo jogo
     private void OnEnable() 
     {
         ResetCharacter();      
@@ -54,6 +55,8 @@ public class Inimigo : Character
         }
     }
 
+    //Define o que ocorre quando o player toma dano, no caso ver se ele irá
+    //morrer ou se deve aguardar mais um tempo até tomar dano novamente
     public override IEnumerator DanoCaractere(int dano, float intervalo) 
     {
         while (true)

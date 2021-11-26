@@ -38,6 +38,7 @@ public class MovimentaPlayer : MonoBehaviour
         
     }
 
+    //Chama o metodo MoveCaractere
     private void FixedUpdate(){
         MoveCaractere();
     }

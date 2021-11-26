@@ -33,6 +33,7 @@ public class Perambular : MonoBehaviour
         GetComponent<CircleCollider2D>().enabled = false;  // desativa o circle collider collison, o collider passa a ser o box collider
     }
 
+    /*Define o que ocorre caso o colisor seja nulo*/
     private void OnDrawGizmos(){
         if(circleCollider != null){
             Gizmos.DrawWireSphere(transform.position, circleCollider.radius);
@@ -50,17 +51,20 @@ public class Perambular : MonoBehaviour
         }
     }
 
+    //Escolhe um novo ponto aleatorio para redirecionar o inimigo
     void EscolherNovoPontoFinal(){
         anguloAtual += Random.Range(0,360);
         anguloAtual = Mathf.Repeat(anguloAtual, 360);
         posicaoFinal += Vector3ParaAngulo(anguloAtual);
     }
 
+    //Calcula novo angulo
     Vector3 Vector3ParaAngulo(float anguloEntradaGraus){
         float anguloEntradaRadianos = anguloEntradaGraus * Mathf.Deg2Rad;
         return new Vector3(Mathf.Cos(anguloEntradaRadianos), Mathf.Sin(anguloEntradaRadianos), 0);
     }
 
+    //Metodo responsavel pelo movimento do inimigo e ocasional pedido de redirecionamento
     public IEnumerator Mover(Rigidbody2D rBParaMover, float velocidade){
         float distanciaFaltante = (transform.position - posicaoFinal).sqrMagnitude;
         while (distanciaFaltante > float.Epsilon)
@@ -82,6 +86,7 @@ public class Perambular : MonoBehaviour
         animator.SetBool("Caminhando", false);
     }
 
+    //Define o comportamento caso o Player entre no range da "visão" do inimigo
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.CompareTag("Player") && perseguePlayer){
             velocidadeCorrente = velocidadePerseguicao;
@@ -93,6 +98,7 @@ public class Perambular : MonoBehaviour
         }
     }
 
+    //Define o comportamento caso o Player saia do range da "visão" do inimigo
     private void OnTriggerExit2D(Collider2D collision){
         if(collision.gameObject.CompareTag("Player")){
             animator.SetBool("Caminhando", false);

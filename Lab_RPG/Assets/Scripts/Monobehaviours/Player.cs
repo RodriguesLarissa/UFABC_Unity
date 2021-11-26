@@ -13,7 +13,7 @@ public class Player : Character
     public int totalColetaveis = 0;
     public PontosDano healthPoints; // Quantidade atual de pontos de vida
 
-    
+    //Define o que ocorre quando o player toma dano, por exemplo animação de flickr na cor e perda de HP
     public override IEnumerator DanoCaractere(int dano, float intervalo) 
     {
         while (true)
@@ -111,7 +111,7 @@ public class Player : Character
                     print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
                     this.totalColetaveis++;
-                    print("Agora voc� tem " + money + " comidas!");
+                    print("Agora voc� tem " + money + " esmeraldas!");
                     break;
                 case CollectibleItem.ItemType.DIAMOND: // caso um diamante seja coletada
                     shouldDissapear = inventario.AddItem(collectedItem);

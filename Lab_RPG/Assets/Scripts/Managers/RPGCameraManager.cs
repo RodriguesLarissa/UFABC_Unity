@@ -8,7 +8,8 @@ public class RPGCameraManager : MonoBehaviour
     [HideInInspector]
     public CinemachineVirtualCamera virtualCamera;
 
-    private void Awake() {
+    private void Awake()
+    { // verifica se há uma única instânica dessa classe sendo usada
         if (instanciaCompartilhada != null && instanciaCompartilhada != this)
         {
             Destroy(gameObject);

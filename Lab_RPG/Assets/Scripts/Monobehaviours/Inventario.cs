@@ -21,6 +21,7 @@ public class Inventario : MonoBehaviour
         
     }
 
+    //Instancia novos slots para colecionaveis e suas imagens e valores
     public void CriaSlots()
     {
         if (slotPrefab != null)
@@ -36,6 +37,7 @@ public class Inventario : MonoBehaviour
         }
     }
 
+    //Adiciona um novo item no inventario caso seja coletado, ou soma mais um há um inventario já preenchido
     public bool AddItem(CollectibleItem itemToAdd)
     {
         for (int i = 0; i < items.Length; i++)
