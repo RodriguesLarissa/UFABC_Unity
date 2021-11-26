@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Arco : MonoBehaviour
 {
-    //Calcula a trajetória do arco definida pelo ponto onde o player se encontra
-    //e o ponto em que a munição deve cair
+    //Calcula a trajetoria do arco definida pelo ponto onde o player se encontra
+    //e o ponto em que a municao deve cair
     public IEnumerator arcoTrajetoria(Vector3 destino, float duracao){
         var posicaoInicial = transform.position;
         var percentualCompleto = 0.0f;

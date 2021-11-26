@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(Animator))]
-public class Perambular : MonoBehaviour
+public class Perambular : MonoBehaviour 
 {
     public float velocidadePerseguicao;  //velocidade do Inimigo na área de Spot
     public float velocidadePerambular;  //velocidade do Inimigo passeando

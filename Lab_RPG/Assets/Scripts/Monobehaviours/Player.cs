@@ -73,14 +73,14 @@ public class Player : Character
      */
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Collectible")) // verifica se � um item colet�vel
+        if (collision.gameObject.CompareTag("Collectible")) // verifica se e um item coletavel
         {
             CollectItem(collision);
         }
     }
    
     /*
-     * Essa fun��o � respons�vel por receber um item colet�vel a partir de uma colis�o e definir para ele
+     * Essa funcao e responsavel por receber um item coletavel a partir de uma colisao e definir para ele
      * um processamento apropriado de acordo com o seu tipo
      */
     public void CollectItem(Collider2D collision) 
@@ -94,44 +94,44 @@ public class Player : Character
             {
                 case CollectibleItem.ItemType.MONEY: // caso uma moeda seja coletada
                     shouldDissapear = inventario.AddItem(collectedItem);
-                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    print("Voce coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
                     this.totalColetaveis++;
-                    print("Agora voc� tem " + money + " moedas!");
+                    print("Agora voce tem " + money + " moedas!");
                     break;
                 case CollectibleItem.ItemType.GREENMONEY: // caso uma moeda verde seja coletada
                     shouldDissapear = inventario.AddItem(collectedItem);
-                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    print("Voce coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
                     this.totalColetaveis++;
-                    print("Agora voc� tem " + money + " moedas verdes!");
+                    print("Agora voce tem " + money + " moedas verdes!");
                     break;
                 case CollectibleItem.ItemType.EMERALD: // caso uma esmeralda seja coletada
                     shouldDissapear = inventario.AddItem(collectedItem);
-                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    print("Voce coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
                     this.totalColetaveis++;
-                    print("Agora voc� tem " + money + " esmeraldas!");
+                    print("Agora voce tem " + money + " esmeraldas!");
                     break;
                 case CollectibleItem.ItemType.DIAMOND: // caso um diamante seja coletada
                     shouldDissapear = inventario.AddItem(collectedItem);
-                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    print("Voce coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
                     this.totalColetaveis++;
-                    print("Agora voc� tem " + money + " diamantes!");
+                    print("Agora voce tem " + money + " diamantes!");
                     break;
                 case CollectibleItem.ItemType.RUBY: // caso um ruby seja coletada
                     shouldDissapear = inventario.AddItem(collectedItem);
-                    print("Voc� coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
+                    print("Voce coletou " + collectedItem.effectiveQuantity + " " + collectedItem.itemName + "!");
                     this.money++;
                     this.totalColetaveis++;
-                    print("Agora voc� tem " + money + " rubis!");
+                    print("Agora voce tem " + money + " rubis!");
                     break;
                 case CollectibleItem.ItemType.HEALTH:
                     shouldDissapear = AjustePontosDano(collectedItem.effectiveQuantity);
                     break;
                 default:
-                    print("Ainda n�o h� uma defini��o adequada para coletar itens do tipo " + collectedItem.itemType);
+                    print("Ainda nao ha uma definicao adequada para coletar itens do tipo " + collectedItem.itemType);
                     break;
             }
             if (shouldDissapear) collision.gameObject.SetActive(false);

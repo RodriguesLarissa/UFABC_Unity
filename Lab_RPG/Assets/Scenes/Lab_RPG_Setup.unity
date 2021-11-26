@@ -6342,6 +6342,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5884211789420962357, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884211789420962357, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491335937319288110, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491335937319288110, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043357263653152957, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043357263653152957, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438181487669637230, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438181487669637230, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93daedd360ab4d4639a47bac6807db2d, type: 3}
 --- !u!114 &1481890258 stripped

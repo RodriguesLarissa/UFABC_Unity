@@ -5,7 +5,7 @@ using UnityEngine;
 ///<summary>
 /// Classe que controla o inimigo no jogo
 ///</summary>
-public class Inimigo : Character
+public class Inimigo : Character 
 {
     float healthPoints; // Quantidade atual de pontos de vida
     public int forcaDano; // quantidade de dano

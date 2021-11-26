@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Classe responsável por controlar e atualizar os estados de animação do Player
 /// </summary>
-public class MovimentaPlayer : MonoBehaviour
+public class MovimentaPlayer : MonoBehaviour 
 {
     public float VelocidadeMovimento = 3.0f; // equivale ao momento (impulso) a ser dado ao player
     Vector2 Movimento = new Vector2();       // detectar movimento pelo teclado

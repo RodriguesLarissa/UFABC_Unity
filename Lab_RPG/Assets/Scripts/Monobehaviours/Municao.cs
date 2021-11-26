@@ -4,7 +4,7 @@ public class Municao : MonoBehaviour
 {
     public int danoCausado; ///poder de dano da municao
 
-    //Define o que ocorre quando a muniçao atinge o inimigo
+    //Define o que ocorre quando a municao atinge o inimigo
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision is BoxCollider2D){
             Inimigo inimigo = collision.gameObject.GetComponent<Inimigo>();

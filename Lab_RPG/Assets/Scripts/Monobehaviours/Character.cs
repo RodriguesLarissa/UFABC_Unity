@@ -6,10 +6,13 @@ using UnityEngine;
 /// Classe usada para definir as caracteristicas compartilhadas entre os personagens do jogo, como o player e os inimigos.
 /// </summary>
 
-public abstract class Character : MonoBehaviour
+public abstract class Character : MonoBehaviour 
 {
     public int initialhealthPoints; // Quantidade inicial de pontos de vida
+    public PontosDano pontosDano; // novo tipo que tem o valor do objeto script
     public int maxHealthPoints; // Quantidade Máxima de pontos de vida
+    public float inicioPontosDano; // valor mínimo inicial de "saúde" do Player
+    public float MaxPontosDano; // valor máximo permitido de "saúde" do Player
 
     /*
      * Método responsável por indicar o que deve ocorrer a algum personagem do RPG
