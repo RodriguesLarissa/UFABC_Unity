@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - Piso
   - Objetos
-  - 
+  - Bloqueio
   - 
   - 
   - 
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: Objetos
     uniqueID: 2414033671
+    locked: 0
+  - name: Character
+    uniqueID: 2553246093
     locked: 0
