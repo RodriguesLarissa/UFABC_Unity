@@ -48,7 +48,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PulaPlataforma\MovePlayerPulo.cs" />
-     <Compile Include="Assets\Scripts\MovePlayer.cs" />
+     <Compile Include="Assets\Scripts\CenaPrincipal\MovePlayer.cs" />
+     <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\ArredondaPosicao.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\pontoDeSpawnCarta.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\JogoDaMemoriaManager.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Scriptables\CartaMedieval.cs" />
@@ -682,6 +683,12 @@
  </Reference>
  <Reference Include="Unity.2D.IK.Runtime">
  <HintPath>C:/Users/Larissa/Documents/Unity Projects/UFABC_Unity/Projeto_Final/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/Larissa/Documents/Unity Projects/UFABC_Unity/Projeto_Final/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/Larissa/Documents/Unity Projects/UFABC_Unity/Projeto_Final/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
  <HintPath>C:/Users/Larissa/Documents/Unity Projects/UFABC_Unity/Projeto_Final/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
