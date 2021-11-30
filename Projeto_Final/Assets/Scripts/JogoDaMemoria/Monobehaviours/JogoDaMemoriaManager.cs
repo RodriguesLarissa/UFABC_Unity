@@ -88,8 +88,8 @@ public class JogoDaMemoriaManager : MonoBehaviour
     {
         float distance = Vector2.Distance(player.transform.position, carta.transform.position);
 
-        if(true)
-        { //distance <= 2
+        if(distance <= 2)
+        {
             if (cartaSelecionada1 == null)
             {
                 cartaSelecionada1 = carta;
@@ -154,7 +154,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
 
         }
 
-        print(cartas.Count);
+        //print(cartas.Count);
         if(cartas.Count == 0)
         {
             print("VITÓRIA!");

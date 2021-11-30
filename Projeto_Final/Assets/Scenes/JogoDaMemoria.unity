@@ -175,6 +175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2193315797147568537, guid: bf77d17e2ea81f54ab5436d8c6d5b621, type: 3}
+      propertyPath: velocityMove
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2569016603030089033, guid: bf77d17e2ea81f54ab5436d8c6d5b621, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -6230,6 +6234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCartaMedieval: {fileID: 4612938314179774622, guid: 9c2a5ee4817cd7549832070484f9fb84, type: 3}
+  player: {fileID: 0}
   cartas: []
 --- !u!4 &1600223616
 Transform:
