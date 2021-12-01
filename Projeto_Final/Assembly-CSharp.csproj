@@ -52,6 +52,9 @@
      <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\ArredondaPosicao.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\pontoDeSpawnCarta.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\JogoDaMemoriaManager.cs" />
+     <Compile Include="Assets\Scripts\FruitGame\SpawnerManage.cs" />
+     <Compile Include="Assets\Scripts\FruitGame\Coletor.cs" />
+     <Compile Include="Assets\Scripts\FruitGame\BaldeManage.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Scriptables\CartaMedieval.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\CartaMedievalO.cs" />
  <Reference Include="UnityEngine">

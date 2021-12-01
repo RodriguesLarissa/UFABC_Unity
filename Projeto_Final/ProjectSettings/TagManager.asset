@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NPC
-  - Projetil
+  - Fruta
+  - Machado
   layers:
   - Default
   - TransparentFX
@@ -13,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Piso
-  - Objetos
-  - Bloqueio
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -43,15 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Piso
-    uniqueID: 3863861313
+  - name: fundo
+    uniqueID: 46810409
     locked: 0
-  - name: Objetos
-    uniqueID: 2414033671
+  - name: materiais
+    uniqueID: 356859215
     locked: 0
-  - name: Character
-    uniqueID: 2553246093
-    locked: 0
-  - name: Projeteis
-    uniqueID: 1582566583
+  - name: personagem
+    uniqueID: 1732592245
     locked: 0
