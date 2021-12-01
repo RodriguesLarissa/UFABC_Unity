@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Machado
+  - Fruta
   layers:
   - Default
   - TransparentFX
@@ -50,4 +52,10 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 2553246093
+    locked: 0
+  - name: Fundo
+    uniqueID: 3136355793
+    locked: 0
+  - name: Frutas
+    uniqueID: 3793066621
     locked: 0
