@@ -10,6 +10,11 @@ public class MovePlayerPulo : MonoBehaviour
     string animationState = "animationState"; // guarda o nome do parametro de Animação
     Rigidbody2D rb2D; // guarda a componente CorpoRigido do Player
 
+    public float speed;
+    public float jumpForce;
+    private bool isGrounded;
+    public Transform feetPos;
+    public float checkRadius;
     /*
         Enumera o número da condição de cada movimento
     */
@@ -30,6 +35,13 @@ public class MovePlayerPulo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius);
+
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb2D.velocity = Vector2.up * jumpForce;
+            //Adicionar barulho de pulo
+        }
         StateUpdate();
     }
 
@@ -43,9 +55,8 @@ public class MovePlayerPulo : MonoBehaviour
     */
     private void MoveCaractere()
     {
-        Movement.x = Input.GetAxisRaw("Horizontal");
-        Movement.Normalize();
-        rb2D.velocity = Movement * velocityMove;
+        velocityMove = Input.GetAxisRaw("Horizontal");
+        rb2D.velocity = new Vector2(velocityMove * speed, rb2D.velocity.y);
     }
 
     /*
@@ -53,11 +64,11 @@ public class MovePlayerPulo : MonoBehaviour
     */
     private void StateUpdate()
     {
-        if (Movement.x > 0)
+        if (velocityMove > 0)
         {
             animator.SetInteger(animationState, (int)EstadosCaractere.andaLeste);
         }
-        else if (Movement.x < 0)
+        else if (velocityMove < 0)
         {
             animator.SetInteger(animationState, (int)EstadosCaractere.andaOeste);
         }
