@@ -36,6 +36,7 @@ public class MovePlayerPulo : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius);
+        transform.eulerAngles = new Vector3(0, 0, 0);
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
