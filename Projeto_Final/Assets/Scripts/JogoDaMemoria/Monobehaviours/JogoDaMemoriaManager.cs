@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Classe responsável por organizar todas as mecânicas necessárias para que o minigame aconteça
@@ -9,11 +10,11 @@ using UnityEditor;
 public class JogoDaMemoriaManager : MonoBehaviour
 {
     public GameObject prefabCartaMedieval;                          //prefab utilizado para instanciar as cartas
-    public GameObject player;
+    public GameObject player;                                       //referência ao player
 
     GameObject cartaSelecionada1 = null, cartaSelecionada2 = null;  //par de cartas a ser comparado
     public List<GameObject> cartas;                                 //lista com todas as cartas presentes
-    GameObject [] pontosSpawnCartas;                         //vetor com todos os posicionamentos possíveis para as cartas
+    GameObject [] pontosSpawnCartas;                                //vetor com todos os posicionamentos possíveis para as cartas
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +89,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
     {
         float distance = Vector2.Distance(player.transform.position, carta.transform.position);
 
-        if(distance <= 2)
+        if(distance <= 3)
         {
             if (cartaSelecionada1 == null)
             {
@@ -159,7 +160,17 @@ public class JogoDaMemoriaManager : MonoBehaviour
         {
             print("VITÓRIA!");
             //O PLAYER VENCE O JOGO: CHAMAR FUNÇÃO DE RETORNAR A (CENA) SALA INICIAL
+            StartCoroutine(RetornarAoLobby());
         }
+    }
+
+    /*
+     * IEnumerator responsável por esperar 2 segundos antes de retornar para cena principal
+     */
+    IEnumerator RetornarAoLobby()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("PrincipalScene");
     }
 
 }

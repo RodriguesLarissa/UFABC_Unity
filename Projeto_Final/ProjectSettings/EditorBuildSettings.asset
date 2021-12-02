@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/PrincipalScene.unity
+    guid: 46eaf28e8fbe42743ae9aaff58419f87
+  - enabled: 1
+    path: Assets/Scenes/JogoDaMemoria.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PulaPlataforma.unity
+    guid: 50e723a08603af44ba08f020263d39a8
+  - enabled: 1
+    path: Assets/Scenes/FruitMiniGame.unity
+    guid: 1cac291b6427e594592d59d664e5a1a9
   m_configObjects: {}
