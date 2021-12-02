@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2569016603030089028}
   - component: {fileID: 2569016603030089035}
   - component: {fileID: 2193315797147568537}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1741721203
+  m_SortingLayerID: 1732592245
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3805472826301233360, guid: e3c3de143e789e14983d4758e35c77a7, type: 3}
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2569016603030089039}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2193315797147568537
 MonoBehaviour:
   m_ObjectHideFlags: 0

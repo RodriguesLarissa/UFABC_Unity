@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fruta
   - Machado
+  - NPC
+  - PontoSpawnCarta
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
