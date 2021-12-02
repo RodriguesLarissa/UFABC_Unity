@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class MovePlayerPulo : MonoBehaviour
 {
-    public float velocityMove = 3.0f; // equivale ao momento (impulso) a ser dado ao player
+    public float sentidoMovimentacao = 3.0f; // equivale ao momento (impulso) a ser dado ao player
     Vector2 Movement = new Vector2(); // detectar movimento pelo teclado
     Animator animator; // guarda a componente do Controlador de Animação
     string animationState = "animationState"; // guarda o nome do parametro de Animação
     Rigidbody2D rb2D; // guarda a componente CorpoRigido do Player
 
-    public float speed;
-    public float jumpForce;
-    private bool isGrounded;
-    public Transform feetPos;
-    public float checkRadius;
+    public LayerMask verificaChao;  /* verifica se a superficie que o game object feetPos esta
+                                     encostando é parte da layer que deve ser considerada chao ou não */
+    public float velocidade;        // usado para definir a velocidade do jogador
+    public float forcaPulo;         // usado para definir a projeção do player no ar
+    private bool estaNoChao;        // Verifica se o player esta no chao para que possa pular, caso contrario não permite essa ação
+    public Transform posicaoPes;    // responsável pelo gameObject feetPos que ficará nos pés do player
+    public float checaRaio;         // define o tamanho raio do gameObject dos pés do player que checa se está no chao
+
     /*
         Enumera o número da condição de cada movimento
     */
@@ -35,13 +38,13 @@ public class MovePlayerPulo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius);
-        transform.eulerAngles = new Vector3(0, 0, 0);
+        // esta no chao é uma variável booleana que irá retornar true caso o raio esteja sofrendo "invasão" de uma camada que é considerada chao 
+        estaNoChao = Physics2D.OverlapCircle(posicaoPes.position, checaRaio, verificaChao); 
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        // se o player estiver no chao e a tecla espaço for pressionada, arremessa o jogador no ar com a impulsão definida por forcaPulo
+        if (estaNoChao == true && Input.GetKeyDown(KeyCode.Space)) 
         {
-            rb2D.velocity = Vector2.up * jumpForce;
-            //Adicionar barulho de pulo
+            rb2D.velocity = Vector2.up * forcaPulo;
         }
         StateUpdate();
     }
@@ -52,12 +55,12 @@ public class MovePlayerPulo : MonoBehaviour
     }
 
     /*  
-        Função que movimenta o player.
+        Função reponsável pelo movimento horizontal do player.
     */
     private void MoveCaractere()
     {
-        velocityMove = Input.GetAxisRaw("Horizontal");
-        rb2D.velocity = new Vector2(velocityMove * speed, rb2D.velocity.y);
+        sentidoMovimentacao = Input.GetAxisRaw("Horizontal");
+        rb2D.velocity = new Vector2(sentidoMovimentacao * velocidade, rb2D.velocity.y);
     }
 
     /*
@@ -65,11 +68,11 @@ public class MovePlayerPulo : MonoBehaviour
     */
     private void StateUpdate()
     {
-        if (velocityMove > 0)
+        if (sentidoMovimentacao > 0)
         {
             animator.SetInteger(animationState, (int)EstadosCaractere.andaLeste);
         }
-        else if (velocityMove < 0)
+        else if (sentidoMovimentacao < 0)
         {
             animator.SetInteger(animationState, (int)EstadosCaractere.andaOeste);
         }

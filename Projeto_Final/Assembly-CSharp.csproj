@@ -39,6 +39,8 @@
      <Compile Include="Assets\Scripts\PulaPlataforma\MovePlayerPulo.cs" />
      <Compile Include="Assets\Scripts\CenaPrincipal\MovePlayer.cs" />
      <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\ArredondaPosicao.cs" />
+     <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\DialogueManager.cs" />
+     <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\Dialogue.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\pontoDeSpawnCarta.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\JogoDaMemoriaManager.cs" />
      <Compile Include="Assets\Scripts\FruitGame\SpawnerManage.cs" />
@@ -46,8 +48,6 @@
      <Compile Include="Assets\Scripts\FruitGame\BaldeManage.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Scriptables\CartaMedieval.cs" />
      <Compile Include="Assets\Scripts\JogoDaMemoria\Monobehaviours\CartaMedievalO.cs" />
-     <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\DialogueManager.cs" />
-     <Compile Include="Assets\Scripts\CenaPrincipal\MonoBehaviours\Dialogue.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/marcelocfsf/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

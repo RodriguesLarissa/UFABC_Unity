@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Responsavel pelo spwan de frutas e machados
 public class SpawnerManage : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] fruits;
-    private BoxCollider2D collider;
+    private GameObject[] fruits; //Vetor de frutas
+    private BoxCollider2D collider; //collider onde as frutas sao instanciadas
 
-    float x1, x2;
+    float x1, x2; // bordas do collider
 
-    
+    //Inicia o collider e grava seu tamanho nas variaveis de borda
     void Awake(){
         collider = GetComponent<BoxCollider2D>();
         
@@ -19,11 +20,14 @@ public class SpawnerManage : MonoBehaviour
 
     }
     
+    //Inicia o spwan de frutas após 1s
     void Start()
     {
         StartCoroutine(SpwanFruit(1f));
     }
 
+    //Spawna frutas ou machados em um range aleatorio dentro do collider
+    //Entra em recursão e spawna frutas entre intervalo aleatorio de 0,5s e 1s 
     IEnumerator SpwanFruit(float time){
         yield return new WaitForSecondsRealtime(time);
 

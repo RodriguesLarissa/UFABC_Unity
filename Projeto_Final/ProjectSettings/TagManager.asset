@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fruta
-  - Machado
   - NPC
-  - PontoSpawnCarta
   layers:
   - Default
   - TransparentFX
@@ -45,12 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: fundo
-    uniqueID: 46810409
+  - name: Piso
+    uniqueID: 3589322781
     locked: 0
-  - name: materiais
-    uniqueID: 356859215
-    locked: 0
-  - name: personagem
-    uniqueID: 1732592245
+  - name: Objects
+    uniqueID: 3136795763
     locked: 0

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>
+/// Classe responsavel pelo movimento do Jogador
+///</summary>
 public class MovePlayer : MonoBehaviour
 {
     public float velocityMove = 3.0f; // equivale ao momento (impulso) a ser dado ao player
