@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FruitMiniGame.unity
     guid: 1cac291b6427e594592d59d664e5a1a9
+  - enabled: 1
+    path: Assets/Scenes/Derrota.unity
+    guid: 3a1e8ae2f48fa0e4fa103136b2bf2ea4
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 30846f901a7bb2f4b86b33067520692f
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 2af6c14510e1d0341930feed35e85465
+  - enabled: 1
+    path: Assets/Scenes/Vitoria.unity
+    guid: ba58311df0f68f04a9000ec4ac32e0a0
   m_configObjects: {}
