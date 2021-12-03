@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Responsavel pelo spwan de frutas e machados
+//Responsavel pelo spawn de frutas e machados
 public class SpawnerManage : MonoBehaviour
 {
     [SerializeField]
@@ -20,15 +20,15 @@ public class SpawnerManage : MonoBehaviour
 
     }
     
-    //Inicia o spwan de frutas após 1s
+    //Inicia o spawn de frutas após 1s
     void Start()
     {
-        StartCoroutine(SpwanFruit(1f));
+        StartCoroutine(SpawnFruit(1f));
     }
 
     //Spawna frutas ou machados em um range aleatorio dentro do collider
     //Entra em recursão e spawna frutas entre intervalo aleatorio de 0,5s e 1s 
-    IEnumerator SpwanFruit(float time){
+    IEnumerator SpawnFruit(float time){
         yield return new WaitForSecondsRealtime(time);
 
         Vector3 temp = transform.position;
@@ -36,6 +36,6 @@ public class SpawnerManage : MonoBehaviour
 
         Instantiate(fruits[Random.Range(0, fruits.Length)], temp, Quaternion.identity);
 
-        StartCoroutine(SpwanFruit(Random.Range(0.5f,1f)));
+        StartCoroutine(SpawnFruit(Random.Range(0.5f,1f)));
     }
 }

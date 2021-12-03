@@ -22,29 +22,38 @@ public class Dialogue : MonoBehaviour
         dc = FindObjectOfType<DialogueManager>(); // Busca o controlodor de dialogo na cena
     }
 
-    // Chama a função de interação com o jogador a cada frame fisico.
+    /*
+     * Chama a função de interação com o jogador a cada frame fisico.
+     */
     private void FixedUpdate() 
     {
         Interact();
     }
 
+    /* 
+     * Quando o jogador está no raio de interação e pressiona o espaço a função que mostra o 
+     * dialogo é chamada
+    */
     private void Update() 
     {
-        // Quando o jogador está no raio de interação e pressiona o espaço a função que mostra o dialogo é chamada
         if (Input.GetKeyDown(KeyCode.Space) && onRadius)
         {
             dc.Speech(profile, speechText, actorName);
         }
     }
 
-    // Função que detecta quando o player está na area de interação do npc
+    /* 
+     *Função que detecta quando o player está na area de interação do npc
+     */
     public void Interact()
     {
         Collider2D hit = Physics2D.OverlapCircle(transform.position, radius, playerLayer);
         onRadius = hit != null ? true : false;
     }
 
-    // Função para mostrar a área de interação do NPC, somente no Unity
+    /* 
+     * Função para mostrar a área de interação do NPC, somente no Unity
+     */
     private void OnDrawGizmosSelected() 
     {
         Gizmos.DrawWireSphere(transform.position, radius);

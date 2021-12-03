@@ -8,7 +8,7 @@ public class BaldeManage : MonoBehaviour
 {
     public float speed = 15f;                   //Velocidade do balde
     private float minBarreira, maxBarreira;     //Limites maximos da tela
-    private Rigidbody2D rigidbody;              //Rigidbody2D do balde
+    private Rigidbody2D rigidBody;              //Rigidbody2D do balde
     private Text scoreBox;                      //Marcador de pontos
     private int score = 0;                      //Pontuação
 
@@ -17,7 +17,7 @@ public class BaldeManage : MonoBehaviour
     //Desperta as configurações do balde (player) no inicio do minigame
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
 
         scoreBox = GameObject.Find("Score").GetComponent<Text>();
         scoreBox.text = "Score: 0";
@@ -60,9 +60,9 @@ public class BaldeManage : MonoBehaviour
     //Controla a direção que o balde se movimenta no eixo horizontal usando o teclado
     void FixedUpdate()
     {
-        Vector2 velocidade = rigidbody.velocity;
+        Vector2 velocidade = rigidBody.velocity;
         velocidade.x = Input.GetAxis("Horizontal")*speed;
-        rigidbody.velocity = velocidade;
+        rigidBody.velocity = velocidade;
     }
 
     //Verifica se o balde chegou nos limites do mapa do minigame e o impede de atravessar

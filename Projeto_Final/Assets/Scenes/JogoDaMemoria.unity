@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 2030935636}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &90156333
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Follow: {fileID: 187863131}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 11.1339035
+    OrthographicSize: 8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -648,7 +648,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.1339035
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7034,6 +7034,7 @@ GameObject:
   - component: {fileID: 2030935633}
   - component: {fileID: 2030935635}
   - component: {fileID: 2030935634}
+  - component: {fileID: 2030935636}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -36171,3 +36172,36 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!60 &2030935636
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030935632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 25.265184, y: -12.301501}
+      - {x: 25.928068, y: 16.065458}
+      - {x: -35.915344, y: 16.374283}
+      - {x: -35.984238, y: -10.321965}
+      - {x: -35.996304, y: -14.979218}
+      - {x: -14.219511, y: -15.336254}
+      - {x: 11.200794, y: -15.707073}
+      - {x: 25.237839, y: -15.370925}

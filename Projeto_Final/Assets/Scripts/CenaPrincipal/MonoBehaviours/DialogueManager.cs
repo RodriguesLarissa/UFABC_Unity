@@ -19,7 +19,9 @@ public class DialogueManager : MonoBehaviour
     private string[] sentences; // Frases que serão ditas pelo NPC
     private int index = 0; // Posição atual dentro do vetor sentences
 
-    // Função que mostra define as propriedades da caixa de dialogo e inicia o escrita na cena
+    /* 
+     * Função que mostra define as propriedades da caixa de dialogo e inicia o escrita na cena
+     */
     public void Speech(Sprite p, string[] txt, string actorName)
     {
         dialogueObj.SetActive(true);
@@ -29,7 +31,10 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence());
     }
 
-    // Função responsável por mostrar o Texto na tela. Ela mostra o texto letra por letra de acordo com uma velocidade
+    /* 
+     * Função responsável por mostrar o Texto na tela. Ela mostra o texto letra por letra 
+     * de acordo com uma velocidade
+     */
     IEnumerator TypeSentence()
     {
         foreach (char letter in sentences[index].ToCharArray())
@@ -39,7 +44,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-    // Função que muda para a frase seguinte ou fecha o dialogo se for a ultima frase
+    /* 
+     * Função que muda para a frase seguinte ou fecha o dialogo se for a ultima frase
+     */
     public void NextSentence()
     {
         if (speechText.text == sentences[index])
