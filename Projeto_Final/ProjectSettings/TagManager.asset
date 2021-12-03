@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Fruta
+  - Machado
+  - Obstaculo
+  - Dialogue Box
   layers:
   - Default
   - TransparentFX

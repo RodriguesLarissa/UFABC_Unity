@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed; // Velocidade em que o texto é mostrado
     private string[] sentences; // Frases que serão ditas pelo NPC
     private int index = 0; // Posição atual dentro do vetor sentences
+    [HideInInspector]
+    public bool inDialogue = false; // // Indica se o dialogo já foi iniciado
 
     /* 
      * Função que mostra define as propriedades da caixa de dialogo e inicia o escrita na cena
@@ -28,6 +30,7 @@ public class DialogueManager : MonoBehaviour
         profile.sprite = p;
         sentences = txt;
         actorNameText.text = actorName;
+        inDialogue = true;
         StartCoroutine(TypeSentence());
     }
 
@@ -41,6 +44,17 @@ public class DialogueManager : MonoBehaviour
         {
             speechText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+
+    /*
+     * 
+     */
+    private void Update() 
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            NextSentence();
         }
     }
     
@@ -62,6 +76,7 @@ public class DialogueManager : MonoBehaviour
                 speechText.text = "";
                 index = 0;
                 dialogueObj.SetActive(false);
+                inDialogue = false;
             }
         }
     }

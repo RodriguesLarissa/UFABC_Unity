@@ -2149,6 +2149,7 @@ MonoBehaviour:
   speechText: {fileID: 7359222854199735832}
   actorNameText: {fileID: 2125467717431584639}
   typingSpeed: 0.05
+  inDialogue: 0
 --- !u!1001 &1156457469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7324,7 +7325,7 @@ GameObject:
   - component: {fileID: 1851939679}
   m_Layer: 5
   m_Name: Dialogue
-  m_TagString: Untagged
+  m_TagString: Dialogue Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7700,6 +7701,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1158171533
       objectReference: {fileID: 0}
+    - target: {fileID: 2569016603030089032, guid: bf77d17e2ea81f54ab5436d8c6d5b621, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 472ffca4abcb6a9489d1a982b011843f, type: 2}
     - target: {fileID: 2569016603030089033, guid: bf77d17e2ea81f54ab5436d8c6d5b621, type: 3}
       propertyPath: m_RootOrder
       value: 0

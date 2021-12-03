@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour
     public LayerMask playerLayer; // Layer do Jogador
     public float radius; // Raio da area onde será possivel interagir com o NPC
     bool onRadius = false; // Indica se o jogador está no raio de interação
+    bool inDialogue = false; // Indica se o dialogo já foi iniciado
 
     private DialogueManager dc; // Controlador de dialogo
 
@@ -36,9 +37,13 @@ public class Dialogue : MonoBehaviour
     */
     private void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Space) && onRadius)
+        inDialogue = dc.inDialogue;
+        print(inDialogue);
+        if (Input.GetKeyDown(KeyCode.Space) && onRadius && !inDialogue)
         {
             dc.Speech(profile, speechText, actorName);
+            onRadius = false;
+            inDialogue = true;
         }
     }
 
