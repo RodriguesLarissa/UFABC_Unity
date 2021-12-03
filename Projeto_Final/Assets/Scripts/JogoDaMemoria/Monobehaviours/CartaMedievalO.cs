@@ -28,7 +28,8 @@ public class CartaMedievalO : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        GameObject.Find("jogoDaMemoriaManager").GetComponent<JogoDaMemoriaManager>().SelecionarCarta(gameObject);
+        //print("Carta selecionada: " + gameObject.name);
+        GameObject.Find("jogoDaMemoriaManager").GetComponent<JogoDaMemoriaManager>().SelecionarCarta(gameObject);  
     }
 
     /*

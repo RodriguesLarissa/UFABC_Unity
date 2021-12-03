@@ -19,6 +19,8 @@ public class JogoDaMemoriaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cartaSelecionada1 = null;
+        cartaSelecionada2 = null;
         pontosSpawnCartas = GameObject.FindGameObjectsWithTag("PontoSpawnCarta");
         CarregarCartas();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -87,9 +89,11 @@ public class JogoDaMemoriaManager : MonoBehaviour
      */
     public void SelecionarCarta(GameObject carta)
     {
-        float distance = Vector2.Distance(player.transform.position, carta.transform.position);
 
-        if(distance <= 3)
+        float distance = Vector2.Distance(player.transform.position, carta.transform.position);
+        //print("Distance: " + distance);
+
+        if(distance < 3)
         {
             if (cartaSelecionada1 == null)
             {
@@ -98,7 +102,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
             }
             else
             {
-                if (cartaSelecionada2 == null)
+                if (cartaSelecionada2 == null && carta != cartaSelecionada1)
                 {
                     cartaSelecionada2 = carta;
                     cartaSelecionada2.GetComponent<CartaMedievalO>().MostrarCarta();
