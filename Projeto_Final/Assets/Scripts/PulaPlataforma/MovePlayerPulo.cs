@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovePlayerPulo : MonoBehaviour
 {
     public float sentidoMovimentacao = 3.0f; // equivale ao momento (impulso) a ser dado ao player
     Vector2 Movement = new Vector2(); // detectar movimento pelo teclado
-    Animator animator; // guarda a componente do Controlador de Animação
-    string animationState = "animationState"; // guarda o nome do parametro de Animação
+    Animator animator; // guarda a componente do Controlador de Animaï¿½ï¿½o
+    string animationState = "animationState"; // guarda o nome do parametro de Animaï¿½ï¿½o
     Rigidbody2D rb2D; // guarda a componente CorpoRigido do Player
 
     public LayerMask verificaChao;  /* verifica se a superficie que o game object feetPos esta
-                                     encostando é parte da layer que deve ser considerada chao ou não */
+                                     encostando ï¿½ parte da layer que deve ser considerada chao ou nï¿½o */
     public float velocidade;        // usado para definir a velocidade do jogador
-    public float forcaPulo;         // usado para definir a projeção do player no ar
-    private bool estaNoChao;        // Verifica se o player esta no chao para que possa pular, caso contrario não permite essa ação
-    public Transform posicaoPes;    // responsável pelo gameObject feetPos que ficará nos pés do player
-    public float checaRaio;         // define o tamanho raio do gameObject dos pés do player que checa se está no chao
+    public float forcaPulo;         // usado para definir a projeï¿½ï¿½o do player no ar
+    private bool estaNoChao;        // Verifica se o player esta no chao para que possa pular, caso contrario nï¿½o permite essa aï¿½ï¿½o
+    public Transform posicaoPes;    // responsï¿½vel pelo gameObject feetPos que ficarï¿½ nos pï¿½s do player
+    public float checaRaio;         // define o tamanho raio do gameObject dos pï¿½s do player que checa se estï¿½ no chao
 
     /*
-        Enumera o número da condição de cada movimento
+        Enumera o nï¿½mero da condiï¿½ï¿½o de cada movimento
     */
     enum EstadosCaractere
     {
@@ -35,13 +36,22 @@ public class MovePlayerPulo : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>(); // recebe o componente RigidBody do Player
     }
 
+    // Verifica a colisÃ£o com a porta e caso haja termina o jogo
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.tag == "Obstaculo")
+        {
+            PlayerPrefs.SetInt("PulaPlataforma", 1);
+            SceneManager.LoadScene("PrincipalScene");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        // esta no chao é uma variável booleana que irá retornar true caso o raio esteja sofrendo "invasão" de uma camada que é considerada chao 
+        // esta no chao ï¿½ uma variï¿½vel booleana que irï¿½ retornar true caso o raio esteja sofrendo "invasï¿½o" de uma camada que ï¿½ considerada chao 
         estaNoChao = Physics2D.OverlapCircle(posicaoPes.position, checaRaio, verificaChao); 
 
-        // se o player estiver no chao e a tecla espaço for pressionada, arremessa o jogador no ar com a impulsão definida por forcaPulo
+        // se o player estiver no chao e a tecla espaï¿½o for pressionada, arremessa o jogador no ar com a impulsï¿½o definida por forcaPulo
         if (estaNoChao == true && Input.GetKeyDown(KeyCode.Space)) 
         {
             rb2D.velocity = Vector2.up * forcaPulo;
@@ -55,7 +65,7 @@ public class MovePlayerPulo : MonoBehaviour
     }
 
     /*  
-        Função reponsável pelo movimento horizontal do player.
+        Funï¿½ï¿½o reponsï¿½vel pelo movimento horizontal do player.
     */
     private void MoveCaractere()
     {
@@ -64,7 +74,7 @@ public class MovePlayerPulo : MonoBehaviour
     }
 
     /*
-        Função que atualiza o estado do player e o atualiza a sprite conforme o movimento.
+        Funï¿½ï¿½o que atualiza o estado do player e o atualiza a sprite conforme o movimento.
     */
     private void StateUpdate()
     {

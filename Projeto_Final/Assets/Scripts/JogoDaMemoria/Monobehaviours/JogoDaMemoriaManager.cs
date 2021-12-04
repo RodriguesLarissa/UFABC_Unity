@@ -5,16 +5,16 @@ using UnityEditor;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Classe responsável por organizar todas as mecânicas necessárias para que o minigame aconteça
+/// Classe responsï¿½vel por organizar todas as mecï¿½nicas necessï¿½rias para que o minigame aconteï¿½a
 /// </summary>
 public class JogoDaMemoriaManager : MonoBehaviour
 {
     public GameObject prefabCartaMedieval;                          //prefab utilizado para instanciar as cartas
-    public GameObject player;                                       //referência ao player
+    public GameObject player;                                       //referï¿½ncia ao player
 
     GameObject cartaSelecionada1 = null, cartaSelecionada2 = null;  //par de cartas a ser comparado
     public List<GameObject> cartas;                                 //lista com todas as cartas presentes
-    GameObject [] pontosSpawnCartas;                                //vetor com todos os posicionamentos possíveis para as cartas
+    GameObject [] pontosSpawnCartas;                                //vetor com todos os posicionamentos possï¿½veis para as cartas
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
     }
 
     /*
-     * Método responsável por carregas as cartas utilizadas no jogo e organizá-las na tela
+     * Mï¿½todo responsï¿½vel por carregas as cartas utilizadas no jogo e organizï¿½-las na tela
      */
     void CarregarCartas()
     {
@@ -43,7 +43,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
             
             foreach (string cm in cartasMedievaisScriptable)
             {
-                string path = AssetDatabase.GUIDToAssetPath(cm).Split('.')[0].Remove(0, 17);    //isola o path corretamente para que a função Resources.Load funcione
+                string path = AssetDatabase.GUIDToAssetPath(cm).Split('.')[0].Remove(0, 17);    //isola o path corretamente para que a funï¿½ï¿½o Resources.Load funcione
                                                                                                 //print(path);
                 GameObject cartaMedieval = Instantiate(prefabCartaMedieval);
                 cartaMedieval.GetComponent<CartaMedievalO>().cartaMedieval = Resources.Load<CartaMedieval>(path);
@@ -69,7 +69,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
     }
 
     /*
-     * Método resposável por randomizar a posição em que as cartas seram apresentadas
+     * Mï¿½todo resposï¿½vel por randomizar a posiï¿½ï¿½o em que as cartas seram apresentadas
      */
     void EmbaralharCartas()
     {
@@ -85,7 +85,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
     }
 
     /*
-     * Método responsável pela seleção de um par de cartas para comparação
+     * Mï¿½todo responsï¿½vel pela seleï¿½ï¿½o de um par de cartas para comparaï¿½ï¿½o
      */
     public void SelecionarCarta(GameObject carta)
     {
@@ -114,7 +114,7 @@ public class JogoDaMemoriaManager : MonoBehaviour
     }
 
     /*
-     *IEnumerator responsável por mostrar as cartas selecionadas pelo player por 1 segundo e em seguida verificar se houve um acerto ou um erro,
+     *IEnumerator responsï¿½vel por mostrar as cartas selecionadas pelo player por 1 segundo e em seguida verificar se houve um acerto ou um erro,
      *dando um tratamento adequado para os dois casos
      */
     IEnumerator VerificarCartas()
@@ -162,18 +162,19 @@ public class JogoDaMemoriaManager : MonoBehaviour
         //print(cartas.Count);
         if(cartas.Count == 0)
         {
-            print("VITÓRIA!");
-            //O PLAYER VENCE O JOGO: CHAMAR FUNÇÃO DE RETORNAR A (CENA) SALA INICIAL
+            print("VITï¿½RIA!");
+            //O PLAYER VENCE O JOGO: CHAMAR FUNï¿½ï¿½O DE RETORNAR A (CENA) SALA INICIAL
             StartCoroutine(RetornarAoLobby());
         }
     }
 
     /*
-     * IEnumerator responsável por esperar 2 segundos antes de retornar para cena principal
+     * IEnumerator responsï¿½vel por esperar 2 segundos antes de retornar para cena principal
      */
     IEnumerator RetornarAoLobby()
     {
         yield return new WaitForSeconds(2);
+        PlayerPrefs.SetInt("JogoDaMemoria", 1);
         SceneManager.LoadScene("PrincipalScene");
     }
 

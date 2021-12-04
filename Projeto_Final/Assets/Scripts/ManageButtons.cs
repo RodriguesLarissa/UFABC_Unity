@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ManageButtons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void start(){
         SceneManager.LoadScene("PrincipalScene"); // Ao clicar no botão, irá para a cena do jogo
     }
@@ -29,4 +17,9 @@ public class ManageButtons : MonoBehaviour
         SceneManager.LoadScene("Intro"); // Ao clicar no botão, irá para os créditos
     }
 
+    public void PlayAgain()
+    {
+        string sceneName = PlayerPrefs.GetString("Scene");
+        SceneManager.LoadScene(sceneName);
+    }
 }

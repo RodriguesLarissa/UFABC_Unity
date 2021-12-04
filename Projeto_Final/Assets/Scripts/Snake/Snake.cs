@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
-[RequireComponent(typeof(BoxCollider2D))]   // Coloca o componente BoxCollider2D como dependência da classe Snake
+[RequireComponent(typeof(BoxCollider2D))]   // Coloca o componente BoxCollider2D como dependï¿½ncia da classe Snake
 
 /// <summary>
-///  Classe responsável pelo comportamento do jogador (Snake)
+///  Classe responsï¿½vel pelo comportamento do jogador (Snake)
 /// </summary>
 public class Snake : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class Snake : MonoBehaviour
     private int initialSize = 3;            // Tamanho inicial da cobra
     private float initialSpeed = 20.0f;     // Velocidade inicial da cobra
     private float speed = 20.0f;            // Velocidade da cobra
-    private int score = 0;
+    private int score = 0;                  // PontuaÃ§Ã£o atual
+    private int collissions = 0;            // NÃºmero de colisÃµes com o rabo ou parede
 
 
     private void Start()
@@ -69,13 +71,21 @@ public class Snake : MonoBehaviour
     // Eventos de colisao da cabeca da cobra com outros objetos
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Comida")          // Colisao da cabeca com a comida: cresce
+        if (collision.tag == "Comida") {
             Grow();
-
-        else if (collision.tag == "Obstaculo")  // Colisao da cabeca com algum segmento do corpo: verifica se venceu
             CheckVictory();
-    }
+        }          // Colisao da cabeca com a comida: cresce
 
+        else if (collision.tag == "Obstaculo" && collissions == 2)  // Colisao da cabeca com algum segmento do corpo: verifica se venceu
+        {
+            SceneManager.LoadScene("Derrota");
+        }
+        else if (collision.tag == "Obstaculo") 
+        {
+            print("Colidiu");
+            collissions++;
+        }
+    }
 
     // IEnumerator responsavel pelo movimento, direcao e controle da velocidade da cobra
     private IEnumerator MoveSnake()
@@ -100,7 +110,7 @@ public class Snake : MonoBehaviour
 
             // Altera a velocidade da cobra, 
             //     manipulando a velocidade de atualizacao da sua corrotina de movimento.
-            //     É inversamente proporcional a variavel 'speed', ou seja:
+            //     ï¿½ inversamente proporcional a variavel 'speed', ou seja:
             //     quanto maior a 'speed', menor o tempo para cada atualizacao (maior velocidade de movimento).
             yield return new WaitForSeconds(1.0f / this.speed);       
         }
@@ -131,7 +141,7 @@ public class Snake : MonoBehaviour
     private void Grow()
     {
         Transform segment = Instantiate(this.segmentPrefab);            // Instancia um novo pedaco (segmento)
-        segment.position = _segments[_segments.Count - 1].position;     // define a posicao do segmento na última
+        segment.position = _segments[_segments.Count - 1].position;     // define a posicao do segmento na ï¿½ltima
 
         _segments.Add(segment);     // Aumenta o tamanho da cobra em +1
         RaiseSpeed();               // Aumenta a velocidade da cobra
@@ -144,16 +154,11 @@ public class Snake : MonoBehaviour
     // Caso seja, chama a Funcao de vitoria do minigame.
     private void CheckVictory()
     {
-        if (score < 10)
-        {
-            Debug.Log("Ainda não venceu");
-            ResetState();
-        }
-        else if (score >= 10)
+        if (score >= 10)
         {
             Debug.Log("Voce venceu!");
-            ResetState();
-            //VenceOJogo(); 
+            PlayerPrefs.SetInt("Snake", 1);
+            SceneManager.LoadScene("PrincipalScene");
         }
     }
 

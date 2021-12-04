@@ -28,7 +28,7 @@ public class BaldeManage : MonoBehaviour
         if(alvo.tag == "Machado"){
             transform.position = new Vector2(0,100);
             alvo.gameObject.SetActive(false);
-            StartCoroutine(Restart());
+            SceneManager.LoadScene("Derrota");
         }
 
         if(alvo.tag == "Fruta"){
@@ -39,7 +39,8 @@ public class BaldeManage : MonoBehaviour
             if(score == pontuacaoVitoria){
                 //Chamar aqui a cena de vitoria ou sair 
                 //para o mundo do jogo
-                StartCoroutine(Restart());
+                PlayerPrefs.SetInt("FruitMiniGame", 1);
+                SceneManager.LoadScene("PrincipalScene");
             }
         }
     }

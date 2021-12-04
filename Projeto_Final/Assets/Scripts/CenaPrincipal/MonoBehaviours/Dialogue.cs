@@ -42,9 +42,17 @@ public class Dialogue : MonoBehaviour
         print(inDialogue);
         if (Input.GetKeyDown(KeyCode.Space) && onRadius && !inDialogue)
         {
-            dc.Speech(profile, speechText, actorName, sceneName);
-            onRadius = false;
+            if (PlayerPrefs.GetInt(sceneName) == 0) 
+            {
+                dc.Speech(profile, speechText, actorName, sceneName);
+            }
+            else 
+            {
+                string[] finished = {"Você já terminou essa missão", "Deseja faze-la novamente"};
+                dc.Speech(profile, finished, actorName, sceneName);
+            }
             inDialogue = true;
+            onRadius = false;
         }
     }
 

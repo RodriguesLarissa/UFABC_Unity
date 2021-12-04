@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 2af6c14510e1d0341930feed35e85465
   - enabled: 1
+    path: Assets/Scenes/Snake.unity
+    guid: d81776d95f8bd4d44bd2ccc4339aab9e
+  - enabled: 1
     path: Assets/Scenes/Vitoria.unity
     guid: ba58311df0f68f04a9000ec4ac32e0a0
   m_configObjects: {}

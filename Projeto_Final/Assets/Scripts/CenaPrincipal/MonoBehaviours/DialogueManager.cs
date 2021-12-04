@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     /*
-     * 
+     * Muda a frase precissioando espaço
      */
     private void Update() 
     {
@@ -100,6 +100,7 @@ public class DialogueManager : MonoBehaviour
 
     public void goToScene()
     {
+        PlayerPrefs.SetString("Scene", sceneName);
         SceneManager.LoadScene(sceneName);
     }
 }
