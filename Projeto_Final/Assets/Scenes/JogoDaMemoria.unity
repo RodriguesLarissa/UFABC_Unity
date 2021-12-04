@@ -376,7 +376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2193315797147568537, guid: bf77d17e2ea81f54ab5436d8c6d5b621, type: 3}
       propertyPath: velocityMove
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2569016603030089032, guid: bf77d17e2ea81f54ab5436d8c6d5b621, type: 3}
       propertyPath: m_SortingLayer

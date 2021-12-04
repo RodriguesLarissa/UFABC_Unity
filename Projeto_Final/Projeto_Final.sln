@@ -1,31 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{46266d4e-618f-ead8-e514-54dcd054c9f6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{bb0bdffc-2e95-8ccf-4fc2-2ceec3711bd9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.UI", "UnityEditor.UI.csproj", "{d15284c9-c498-f89f-36ab-9d6e431b469b}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{9248df28-0783-2a40-0255-c01e7b82346e}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Editor", "Unity.2D.Tilemap.Editor.csproj", "{f300cf6e-0b3f-e5a5-497e-1b3cebc68a43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{FCDF0BBB-952E-CF8C-4FC2-2CEEC3711BD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46266d4e-618f-ead8-e514-54dcd054c9f6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46266d4e-618f-ead8-e514-54dcd054c9f6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{bb0bdffc-2e95-8ccf-4fc2-2ceec3711bd9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{bb0bdffc-2e95-8ccf-4fc2-2ceec3711bd9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{d15284c9-c498-f89f-36ab-9d6e431b469b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{d15284c9-c498-f89f-36ab-9d6e431b469b}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9248df28-0783-2a40-0255-c01e7b82346e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9248df28-0783-2a40-0255-c01e7b82346e}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{f300cf6e-0b3f-e5a5-497e-1b3cebc68a43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{f300cf6e-0b3f-e5a5-497e-1b3cebc68a43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDF0BBB-952E-CF8C-4FC2-2CEEC3711BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCDF0BBB-952E-CF8C-4FC2-2CEEC3711BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDF0BBB-952E-CF8C-4FC2-2CEEC3711BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCDF0BBB-952E-CF8C-4FC2-2CEEC3711BD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
