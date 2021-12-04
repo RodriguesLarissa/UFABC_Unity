@@ -39,7 +39,6 @@ public class Dialogue : MonoBehaviour
     private void Update() 
     {
         inDialogue = dc.inDialogue;
-        print(inDialogue);
         if (Input.GetKeyDown(KeyCode.Space) && onRadius && !inDialogue)
         {
             if (PlayerPrefs.GetInt(sceneName) == 0) 
