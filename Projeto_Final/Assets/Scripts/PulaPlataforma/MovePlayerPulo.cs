@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Classe responsável pelo gerenciamento do jogo Pula Plataforma.
+/// </summary>
 public class MovePlayerPulo : MonoBehaviour
 {
     public float sentidoMovimentacao = 3.0f; // equivale ao momento (impulso) a ser dado ao player
@@ -12,12 +15,12 @@ public class MovePlayerPulo : MonoBehaviour
     Rigidbody2D rb2D; // guarda a componente CorpoRigido do Player
 
     public LayerMask verificaChao;  /* verifica se a superficie que o game object feetPos esta
-                                     encostando � parte da layer que deve ser considerada chao ou n�o */
+                                     encostando a parte da layer que deve ser considerada chao ou nao */
     public float velocidade;        // usado para definir a velocidade do jogador
-    public float forcaPulo;         // usado para definir a proje��o do player no ar
-    private bool estaNoChao;        // Verifica se o player esta no chao para que possa pular, caso contrario n�o permite essa a��o
+    public float forcaPulo;         // usado para definir a projecao do player no ar
+    private bool estaNoChao;        // Verifica se o player esta no chao para que possa pular, caso contrario nao permite essa acao
     public Transform posicaoPes;    // respons�vel pelo gameObject feetPos que ficar� nos p�s do player
-    public float checaRaio;         // define o tamanho raio do gameObject dos p�s do player que checa se est� no chao
+    public float checaRaio;         // define o tamanho raio do gameObject dos p�s do player que checa se esta no chao
 
     /*
         Enumera o n�mero da condi��o de cada movimento
@@ -48,10 +51,10 @@ public class MovePlayerPulo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // esta no chao � uma vari�vel booleana que ir� retornar true caso o raio esteja sofrendo "invas�o" de uma camada que � considerada chao 
+        // esta no chao e uma variavel booleana que ira retornar true caso o raio esteja sofrendo "invasao" de uma camada que e considerada chao 
         estaNoChao = Physics2D.OverlapCircle(posicaoPes.position, checaRaio, verificaChao); 
 
-        // se o player estiver no chao e a tecla espa�o for pressionada, arremessa o jogador no ar com a impuls�o definida por forcaPulo
+        // se o player estiver no chao e a tecla espaco for pressionada, arremessa o jogador no ar com a impulsao definida por forcaPulo
         if (estaNoChao == true && Input.GetKeyDown(KeyCode.Space)) 
         {
             rb2D.velocity = Vector2.up * forcaPulo;
@@ -65,7 +68,7 @@ public class MovePlayerPulo : MonoBehaviour
     }
 
     /*  
-        Fun��o repons�vel pelo movimento horizontal do player.
+        Funcao reponsavel pelo movimento horizontal do player.
     */
     private void MoveCaractere()
     {
@@ -74,7 +77,7 @@ public class MovePlayerPulo : MonoBehaviour
     }
 
     /*
-        Fun��o que atualiza o estado do player e o atualiza a sprite conforme o movimento.
+        Funcao que atualiza o estado do player e o atualiza a sprite conforme o movimento.
     */
     private void StateUpdate()
     {
