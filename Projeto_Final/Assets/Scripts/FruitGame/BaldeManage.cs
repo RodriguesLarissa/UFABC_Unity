@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Classe responsável pelo gerenciamento do comportamento do balde (controlado pelo jogador)
+/// </summary>
 public class BaldeManage : MonoBehaviour
 {
     public float speed = 15f;                   //Velocidade do balde
@@ -14,7 +17,9 @@ public class BaldeManage : MonoBehaviour
 
     public int pontuacaoVitoria = 25;           //Quantidade maxima de pontos para ganhar
 
-    //Desperta as configurações do balde (player) no inicio do minigame
+    /*
+     * Desperta as configurações do balde (player) no inicio do minigame
+    */
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -23,7 +28,9 @@ public class BaldeManage : MonoBehaviour
         scoreBox.text = "Score: 0";
     }
 
-    //Detecta colissao entre fruta/machado e o balde e analisa se o objeto foi coletado
+    /*
+     *Detecta colissao entre fruta/machado e o balde e analisa se o objeto foi coletado
+     */ 
     void OnTriggerEnter2D(Collider2D alvo) {
         if(alvo.tag == "Machado"){
             transform.position = new Vector2(0,100);
@@ -45,20 +52,26 @@ public class BaldeManage : MonoBehaviour
         }
     }
 
-    //Reinicia o minigame em caso de perca
+    /*
+     * Reinicia o minigame em caso de perca
+    */
     IEnumerator Restart(){
         yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    //Inicia o minigame
+    /*
+     * Inicia o minigame
+    */
     void Start(){
         Vector3 coordenadas = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         minBarreira = -coordenadas.x + 1f;
         maxBarreira = coordenadas.x - 1f;
     }
     
-    //Controla a direção que o balde se movimenta no eixo horizontal usando o teclado
+    /*
+     * Controla a direção que o balde se movimenta no eixo horizontal usando o teclado
+    */
     void FixedUpdate()
     {
         Vector2 velocidade = rigidBody.velocity;
@@ -66,7 +79,9 @@ public class BaldeManage : MonoBehaviour
         rigidBody.velocity = velocidade;
     }
 
-    //Verifica se o balde chegou nos limites do mapa do minigame e o impede de atravessar
+    /*
+     * Verifica se o balde chegou nos limites do mapa do minigame e o impede de atravessar
+    */
     void Update()
     {
         Vector3 temp = transform.position;

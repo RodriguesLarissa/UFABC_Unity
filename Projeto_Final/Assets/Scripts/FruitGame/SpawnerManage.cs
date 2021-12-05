@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Responsavel pelo spawn de frutas e machados
+/// <summary>
+/// Classe responsavel pelo spawn de objetos coletáveis: frutas e machados
+/// </summary>
 public class SpawnerManage : MonoBehaviour
 {
     [SerializeField]
@@ -11,7 +13,10 @@ public class SpawnerManage : MonoBehaviour
 
     float x1, x2; // bordas do collider
 
-    //Inicia o collider e grava seu tamanho nas variaveis de borda
+    /*
+     * Inicia o collider e grava seu tamanho nas variaveis de borda
+     */
+
     void Awake(){
         collider = GetComponent<BoxCollider2D>();
         
@@ -20,14 +25,18 @@ public class SpawnerManage : MonoBehaviour
 
     }
     
-    //Inicia o spawn de frutas após 1s
+    /*
+     * Inicia o spawn de frutas após 1s
+    */
     void Start()
     {
         StartCoroutine(SpawnFruit(1f));
     }
 
-    //Spawna frutas ou machados em um range aleatorio dentro do collider
-    //Entra em recursão e spawna frutas entre intervalo aleatorio de 0,5s e 1s 
+    /*
+     * Spawna frutas ou machados em um range aleatorio dentro do collider
+     * Entra em recursão e spawna frutas entre intervalo aleatorio de 0,5s e 1s 
+    */
     IEnumerator SpawnFruit(float time){
         yield return new WaitForSecondsRealtime(time);
 

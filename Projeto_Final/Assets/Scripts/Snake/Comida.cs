@@ -11,18 +11,21 @@ public class Comida : MonoBehaviour
 
     private void Start()
     {
-        RandomizePosition();    //
+        RandomizePosition();    // Gera a primeira posição aleatória
     }
 
-    // Evento de colisão da cabeça da cobra com a comida
+    /*
+     * Evento de colisão da cabeça da cobra com a comida
+    */
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Snake")
             RandomizePosition();
     }
 
-    // Converter comentário em Summary:
-    // aleatoriza a posição de 'spawn' da comida no espaço delimitado pela gridArea.
+    /*
+     * aleatoriza a posição de 'spawn' da comida no espaço delimitado pela gridArea.
+    */
     private void RandomizePosition()
     {
         Bounds bounds = this.gridArea.bounds;   // Define os limites

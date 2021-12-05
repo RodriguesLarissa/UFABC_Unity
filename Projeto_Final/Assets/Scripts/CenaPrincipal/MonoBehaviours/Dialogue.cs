@@ -39,7 +39,7 @@ public class Dialogue : MonoBehaviour
     private void Update() 
     {
         inDialogue = dc.inDialogue;
-        print(inDialogue);
+        // print(inDialogue);
         if (Input.GetKeyDown(KeyCode.Space) && onRadius && !inDialogue)
         {
             if (PlayerPrefs.GetInt(sceneName) == 0) 
@@ -48,7 +48,7 @@ public class Dialogue : MonoBehaviour
             }
             else 
             {
-                string[] finished = {"Você já terminou essa missão", "Deseja faze-la novamente"};
+                string[] finished = {"Você já concluiu essa missão...", "Mas, posso permitir que você faça outra vez..."};
                 dc.Speech(profile, finished, actorName, sceneName);
             }
             inDialogue = true;
@@ -72,4 +72,5 @@ public class Dialogue : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, radius);
     }
+
 }

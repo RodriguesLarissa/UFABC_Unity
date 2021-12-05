@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     /*
-     * Muda a frase precissioando espaço
+     * Muda a frase pressionando espaço
      */
     private void Update() 
     {
@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
             NextSentence();
         }
     }
-    
+
     /* 
      * Função que muda para a frase seguinte ou fecha o dialogo se for a ultima frase
      */
@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
         if (speechText.text == sentences[index])
         {
             // ainda há textos
-            if(index < sentences.Length - 1)
+            if (index < sentences.Length - 1)
             {
                 index++;
                 speechText.text = "";
@@ -83,12 +83,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /*
+     * Função para o jogador decidir se entra no minigame ou não (fim do diálogo com o NPC)
+     */
     public void Decision ()
     {
         StartCoroutine(TypeSentence("Você aceita o desafio?"));
         decisionButtons.SetActive(true);
     }
 
+    /*
+     * Fecha o diálogo em execução ao ser chamada
+     */
     public void closeDialogue()
     {
         inDialogue = false;
@@ -98,6 +104,9 @@ public class DialogueManager : MonoBehaviour
         dialogueObj.SetActive(false);
     }
 
+    /*
+     * Transiciona de cena
+     */
     public void goToScene()
     {
         PlayerPrefs.SetString("Scene", sceneName);

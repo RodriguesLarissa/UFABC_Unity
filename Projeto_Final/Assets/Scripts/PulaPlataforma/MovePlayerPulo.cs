@@ -11,7 +11,7 @@ public class MovePlayerPulo : MonoBehaviour
     public float sentidoMovimentacao = 3.0f; // equivale ao momento (impulso) a ser dado ao player
     Vector2 Movement = new Vector2(); // detectar movimento pelo teclado
     Animator animator; // guarda a componente do Controlador de Anima��o
-    string animationState = "animationState"; // guarda o nome do parametro de Anima��o
+    string animationState = "animationState"; // guarda o nome do parametro de Animacao
     Rigidbody2D rb2D; // guarda a componente CorpoRigido do Player
 
     public LayerMask verificaChao;  /* verifica se a superficie que o game object feetPos esta
@@ -19,11 +19,11 @@ public class MovePlayerPulo : MonoBehaviour
     public float velocidade;        // usado para definir a velocidade do jogador
     public float forcaPulo;         // usado para definir a projecao do player no ar
     private bool estaNoChao;        // Verifica se o player esta no chao para que possa pular, caso contrario nao permite essa acao
-    public Transform posicaoPes;    // respons�vel pelo gameObject feetPos que ficar� nos p�s do player
+    public Transform posicaoPes;    // respons�vel pelo gameObject feetPos que ficara nos pes do player
     public float checaRaio;         // define o tamanho raio do gameObject dos p�s do player que checa se esta no chao
 
     /*
-        Enumera o n�mero da condi��o de cada movimento
+        Enumera o n�mero da condicao de cada movimento
     */
     enum EstadosCaractere
     {
@@ -39,7 +39,9 @@ public class MovePlayerPulo : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>(); // recebe o componente RigidBody do Player
     }
 
-    // Verifica a colisão com a porta e caso haja termina o jogo
+    /*
+     * Verifica a colisão com a porta e caso haja termina o jogo
+    */
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "Obstaculo")
         {
