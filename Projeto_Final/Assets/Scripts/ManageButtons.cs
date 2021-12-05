@@ -3,20 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Classe para gerenciamento dos botões utilizados no jogo
+/// </summary>
 public class ManageButtons : MonoBehaviour
 {
+    /*
+     * Ao clicar no botão, irá para a cena do jogo
+     */
     public void start(){
-        SceneManager.LoadScene("PrincipalScene"); // Ao clicar no botão, irá para a cena do jogo
+        SceneManager.LoadScene("PrincipalScene"); 
     }
 
+    /*
+     * Ao clicar no botão, irá para os créditos
+     */
     public void Creditos(){
-        SceneManager.LoadScene("Creditos"); // Ao clicar no botão, irá para os créditos
+        SceneManager.LoadScene("Creditos");
     }
 
+    /*
+     * Ao clicar no botão, irá para os créditos
+     */
     public void Intro(){
-        SceneManager.LoadScene("Intro"); // Ao clicar no botão, irá para os créditos
+        SceneManager.LoadScene("Intro"); 
     }
 
+    /*
+     * Ao clicar no botão, reinicia o jogo (envia para a tela inicial)
+     */
     public void PlayAgain()
     {
         string sceneName = PlayerPrefs.GetString("Scene");

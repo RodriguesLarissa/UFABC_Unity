@@ -9,7 +9,9 @@ public class SnakeGameManager : MonoBehaviour
 {
     private static SnakeGameManager instance = null;    // Cria a instancia do SnakeGameManager
 
-    // Inicia a instância do SnakeGameManager
+    /*
+     * Inicia a instância do SnakeGameManager
+    */
     public static SnakeGameManager Instance
     {
         get
@@ -36,7 +38,9 @@ public class SnakeGameManager : MonoBehaviour
     //    }
 
 
-    // Acrescentar addToScore no placar do jogador
+    /*
+     * Acrescentar addToScore no placar do jogador
+    */
     public void UpdateScore(int score)
     {
         Text scoreText = GameObject.Find("Score").GetComponent<Text>();
