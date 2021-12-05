@@ -48,7 +48,7 @@ public class Dialogue : MonoBehaviour
             }
             else 
             {
-                string[] finished = {"Você já concluiu essa missão...", "Mas, posso permitir que você faça outra vez..."};
+                string[] finished = {"Você já concluiu essa missão. Quando concluir todas, vá até a porta...", "Mas posso permitir que você faça outra vez..."};
                 dc.Speech(profile, finished, actorName, sceneName);
             }
             inDialogue = true;
