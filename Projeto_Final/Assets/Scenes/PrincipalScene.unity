@@ -1371,7 +1371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &133064865
 GameObject:
@@ -1482,7 +1482,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168098012
 GameObject:
@@ -2306,7 +2306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[0]
@@ -2329,6 +2329,10 @@ PrefabInstance:
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[4]
       value: "Ah, e a prop\xF3sito, me chamo Tiranus..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
+      propertyPath: speechText.Array.data[5]
+      value: (Use WASD ou as setas nesse desafio)
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957320, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -2368,7 +2372,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 472ffca4abcb6a9489d1a982b011843f, type: 2}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2412,94 +2416,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
---- !u!1 &975236585
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 975236587}
-  - component: {fileID: 975236586}
-  - component: {fileID: 975236588}
-  m_Layer: 0
-  m_Name: StartingHelp
-  m_TagString: StartingHelp
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &975236586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975236585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8c8f78b005b04c8bd0e32f73b1b946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 0}
-  speechText:
-  - ...
-  - "Guerreiro, bem-vindo \xE0 essa jornada..."
-  - "Para sair desta masmorra, voc\xEA deve concluir o desafio de cada um dos mestres..."
-  - "Use a barra de espa\xE7o para interagir com eles, eles lhe guiar\xE3o em sua
-    jornada..."
-  - "Outros desafios podem exigir que voc\xEA interaja com o clique do mouse..."
-  - "Quando todos os desafios estiverem completos, dirija-se \xE0 porta para encerrar
-    sua aventura..."
-  - "Agora voc\xEA est\xE1 lan\xE7ado \xE0 pr\xF3pria sorte..."
-  - Que ela acompanhe sua jornada.
-  actorName: ...
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  radius: 0.5
-  sceneName: VozesDaCabeca
---- !u!4 &975236587
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975236585}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.44, y: -0.58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &975236588
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975236585}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &977325738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2525,7 +2441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[0]
@@ -2546,6 +2462,10 @@ PrefabInstance:
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[4]
       value: "De qualquer forma, se quiser sair daqui ter\xE1 que aceitar o desafio..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
+      propertyPath: speechText.Array.data[5]
+      value: "(Use WASD, setas e a barra de espa\xE7o nesse desafio)"
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957320, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -2585,7 +2505,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 472ffca4abcb6a9489d1a982b011843f, type: 2}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2697,7 +2617,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077217546
 GameObject:
@@ -2728,7 +2648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1077217548
 MonoBehaviour:
@@ -2775,7 +2695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[0]
@@ -2793,6 +2713,10 @@ PrefabInstance:
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[3]
       value: "Ah n\xE3o importa, vamos ao que interessa..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
+      propertyPath: speechText.Array.data[4]
+      value: (Use WASD, setas e o clique do mouse nesse desafio)
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957320, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -2832,7 +2756,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 472ffca4abcb6a9489d1a982b011843f, type: 2}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3088,7 +3012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1681936649 stripped
 Transform:
@@ -8033,7 +7957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462146546604736807, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: speechText.Array.data[4]
-      value: (Para este desafio, utilize WASD ou as setas)
+      value: (Use WASD ou as setas nesse desafio)
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957320, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -8069,7 +7993,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 472ffca4abcb6a9489d1a982b011843f, type: 2}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5039114917659957326, guid: 5132d94065b5a4e48806b738f396382b, type: 3}
       propertyPath: m_LocalPosition.x
