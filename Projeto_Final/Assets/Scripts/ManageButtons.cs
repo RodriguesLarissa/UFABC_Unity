@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class ManageButtons : MonoBehaviour
 {
     /*
-     * Ao clicar no botão, irá para a cena do jogo
+     * Ao clicar no botão, irá para a cena principal do jogo
      */
     public void start(){
         SceneManager.LoadScene("PrincipalScene"); 
@@ -23,7 +23,7 @@ public class ManageButtons : MonoBehaviour
     }
 
     /*
-     * Ao clicar no botão, irá para os créditos
+     * Ao clicar no botão, irá para a intro
      */
     public void Intro(){
         SceneManager.LoadScene("Intro"); 
